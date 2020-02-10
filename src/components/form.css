@@ -1,0 +1,119 @@
+:root {
+    --form-background: #efefef;
+    --form-font: #333;
+    --submit-color: #333;
+    --submit-hover: black;
+}
+
+.contactCta {
+    color: #333;
+    text-align: center;
+    width: 60vw;
+    margin: auto;
+    padding-top: 50px;
+    margin-bottom: 50px;
+}
+
+#ctaTitle {
+    font-size: 1.8em;
+    letter-spacing: 3px;
+}
+
+.ctaBody {
+    letter-spacing: .6px;
+    line-height: 30px;
+    
+    font-size: .8em;
+}
+
+
+/* FORM ====================================================================== */
+
+.contactForm {
+    background-color: var(--form-background);
+    color: var(--form-font);
+    /* border: 1px solid darkgrey; */
+    padding: 15px;
+    margin: auto;
+    margin-top: 35px;
+    margin-bottom: 35px;
+
+    width: 500px;
+    height: 700px;
+}
+
+.groupOne > *, .groupTwo > * {
+    color: var(--form-font);
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid var(--form-font);
+    width: 200px;
+    height: 20px;
+    margin: 20px;
+    text-align: center;
+    justify-self: center;
+
+    font-size: 0.8em;
+}
+
+::placeholder {
+    color: var(--form-font);
+    opacity: 1;
+}
+
+.groupOne > *:focus, .groupTwo > *:focus {
+    outline: none;
+}
+
+.formTitle {
+    border-bottom: none;
+    text-align: center;
+
+    font-size: 1.5em;
+    letter-spacing: 3px;
+
+    align-self: center;
+}
+
+#f4 {
+    text-align: right;
+}
+
+#moreAbout {
+    height: 100px;
+    border: 1px solid var(--form-font);
+}
+
+.submitForm {
+    margin-top: 18px;
+    border: 1px solid var(--submit-color);
+    background-color: var(--submit-color);
+    color: var(--form-background);
+    height: 30px;
+    width: 90px;
+    justify-self: center;
+    cursor: pointer;
+}
+
+.submitForm:hover {
+    background-color: var(--submit-hover);
+}
+
+
+
+/* FORM ALIGNING =========================================== */
+
+.groupOne {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(auto, 1fr);
+    justify-content: center;
+
+}
+
+.groupTwo {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+}

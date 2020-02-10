@@ -1,0 +1,54 @@
+.aboutWrapper {
+    margin-left: 15vw;
+    margin-right: 15vw;
+}
+
+.about {
+    height: auto;
+    margin-top: 75px;
+    margin-bottom: 75px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: auto;
+    grid-column-gap: 25px;
+    grid-row-gap: 35px;
+    justify-items: center;
+    align-items: center; 
+
+    background-color: white;
+}
+
+.aboutPhoto {
+
+}
+
+.aboutText {
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+    width: 350px;
+}
+
+.aboutTitle {
+    margin-bottom: 2px;
+}
+
+.aboutBody {
+    letter-spacing: .8px;
+    line-height: 30px;
+    
+    font-size: .8em;
+}
+
+.usLink {
+    padding: 8px;
+    border: 1px solid #333;
+    background-color: transparent;
+}
+
+.usLink:hover {
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+}

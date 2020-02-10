@@ -1,0 +1,26 @@
+.socialWrapper {
+    height: 70vh;
+    display: flex;
+    flex-direction: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.socialTitle {
+    font-family: serif;
+}
+
+.socialPhotos {
+    background-color: #f8f6f2;
+    color: #9d9a97;
+    font-family: serif;
+    width: 50vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: auto;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+
+    justify-items: center;
+    align-items: center;
+}

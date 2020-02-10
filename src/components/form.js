@@ -11,21 +11,20 @@ export default () => {
           </div>
   
   
-          <form className='contactForm' netlify="true" name='inquiry' method='POST'>
-          <input type="hidden" name="form-name" value="inquiry" />
+          <form name='inquiry' method='POST' className='contactForm' netlify="true" >
+          <input type="hidden" name="inquiry" value="inquiry" />
               <h4 className='formTitle'>say hello</h4>
-              <div className='groupOne'>
-                  <input id='f1' type='text' placeholder='first name*' required/>
-                  <input id='f2' type='text' placeholder='last name*' required/>
-                  <input id='f3' type='text' placeholder='type of event*' required/>
-                  <input id='f4' type='date' placeholder='date' />
-              </div>
-              <div className='groupTwo'>
-                  <textarea id='f5' id='moreAbout' placeholder='tell us more about you!*' required></textarea>
-                  <input id='f6' type='email' placeholder='your email address*' required/>
-                  <input id='f7' type='text' placeholder='how did you hear about us?!' />
+    
+                  <label>full name*<input id='f1' type='text' name='name' required/></label>
+                  <label>significant others' name (if applicable)<input id='f2' type='text' name='spouses name' /></label>
+                  <label>type of event*<input id='f3' type='text' name='event type' required/></label>
+                  <label>date<input id='f4' type='date'/></label>
+
+                  <label>tell us more about you!*<textarea id='f5' id='moreAbout' name='more about' required></textarea></label>
+                  <label>email address*<input id='f6' type='email' name='address' required/></label>
+                  <label>how did you hear about us?!<input id='f7' type='text' name='how did you hear?' /></label>
                   <button id='f8' type='submit' className='submitForm'>submit!</button>
-              </div>
+           
           </form>
 
 {/* ===================================================================== */}

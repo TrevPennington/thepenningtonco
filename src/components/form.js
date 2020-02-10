@@ -11,7 +11,8 @@ export default () => {
           </div>
   
   
-          {/* <form className='contactForm' data-netlify="true" name='inquiry' method='post'>
+          <form className='contactForm' netlify="true" name='inquiry' method='POST'>
+          <input type="hidden" name="form-name" value="inquiry" />
               <h4 className='formTitle'>say hello</h4>
               <div className='groupOne'>
                   <input id='f1' type='text' placeholder='first name*' required/>
@@ -25,8 +26,10 @@ export default () => {
                   <input id='f7' type='text' placeholder='how did you hear about us?!' />
                   <button id='f8' type='submit' className='submitForm'>submit!</button>
               </div>
-          </form> */}
+          </form>
 
+{/* ===================================================================== */}
+{/* 
           <form name="contact" method="POST" netlify="true">
           <input type="hidden" name="form-name" value="contact" />
   <p>
@@ -47,7 +50,7 @@ export default () => {
   <p>
     <button type="submit">Send</button>
   </p>
-</form>
+</form> */}
 
         </div>
     )

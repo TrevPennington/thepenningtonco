@@ -1,21 +1,28 @@
 :root {
     --form-background: #efefef;
-    --form-font: #333;
+    --form-font: #555;
+    --form-font-fade: rgba(51, 51, 51, 0.2);
     --submit-color: #333;
     --submit-hover: black;
 }
 
 .contactCta {
-    color: #333;
+    color: #555;
     text-align: center;
-    width: 60vw;
+    width: 430px;
+    height: 45vh;
     margin: auto;
     padding-top: 50px;
     margin-bottom: 50px;
+
+    position: relative;
+    top: 0vh;
+    right: 10px;
+    left: 10px;
 }
 
 #ctaTitle {
-    font-size: 1.8em;
+    font-size: 1.4em;
     letter-spacing: 3px;
 }
 
@@ -35,57 +42,61 @@
     /* border: 1px solid darkgrey; */
     padding: 15px;
     margin: auto;
-    margin-top: 35px;
+    margin-top: 70px;
     margin-bottom: 35px;
-
     width: 500px;
-    height: 700px;
+    height: 600px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
 }
 
-.groupOne > *, .groupTwo > * {
-    color: var(--form-font);
-    border: none;
-    background-color: transparent;
-    border-bottom: 1px solid var(--form-font);
-    width: 200px;
-    height: 20px;
-    margin: 20px;
+.contactForm > * {
+    width: 350px;
+    margin-bottom: 25px;
     text-align: center;
-    justify-self: center;
+    border: none;
 
-    font-size: 0.8em;
+    background-color: transparent;
+    border: 1px solid var(--form-font-fade);
 }
 
-::placeholder {
+::placeholder, #f4{
     color: var(--form-font);
     opacity: 1;
+
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-size: .7em;
+    letter-spacing: 1px;
 }
 
-.groupOne > *:focus, .groupTwo > *:focus {
+input:focus, textarea:focus {
     outline: none;
 }
 
 .formTitle {
-    border-bottom: none;
-    text-align: center;
-
-    font-size: 1.5em;
+    border: none;
+    text-align: left;
+    font-size: 1.7em;
     letter-spacing: 3px;
-
-    align-self: center;
+    align-self: start;
+    margin-bottom: 70px;
+    margin-top: -30px;
 }
 
 #f4 {
-    text-align: right;
+    text-align: center;
 }
 
 #moreAbout {
     height: 100px;
-    border: 1px solid var(--form-font);
 }
 
 .submitForm {
-    margin-top: 18px;
+    margin-top: 15px;
     border: 1px solid var(--submit-color);
     background-color: var(--submit-color);
     color: var(--form-background);
@@ -93,27 +104,13 @@
     width: 90px;
     justify-self: center;
     cursor: pointer;
+
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-size: .75em;
+    letter-spacing: 1px;
 }
 
 .submitForm:hover {
     background-color: var(--submit-hover);
-}
-
-
-
-/* FORM ALIGNING =========================================== */
-
-.groupOne {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(auto, 1fr);
-    justify-content: center;
-
-}
-
-.groupTwo {
-    display: grid;
-    grid-template-columns: 1fr;
-    justify-content: center;
-    align-items: center;
 }

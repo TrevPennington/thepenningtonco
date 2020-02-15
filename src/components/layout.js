@@ -12,6 +12,8 @@ import Hero from "./hero"
 import Footer from "./footer"
 import "./layout.css"
 import "./header.css"
+import mainlogo from "../images/SVG/trevor+shelby light.svg"
+import secondlogo from "../images/SVG/trevor+shelby.svg"
 
 class Layout extends React.Component {
   render() {
@@ -35,7 +37,7 @@ class Layout extends React.Component {
         <h1 className='navLogo'>
           <Link to="/">
           {/* TODO: Make this a variable */}
-            The Pennington Co 
+            <img src={mainlogo} alt='The Pennington Co.' width='120' height='120' className='mainLogo' />
           </Link>
         </h1>
         <h2 className='inquire'>
@@ -57,7 +59,7 @@ class Layout extends React.Component {
         </h2>
         <h1 className='navLogo dark'>
           <Link to="/">
-            The Pennington Co
+            <img src={secondlogo} alt='The Pennington Co.' width='120' height='120' className='mainLogo'/>
           </Link>
         </h1>
         <h2 className='inquire dark'>

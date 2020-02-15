@@ -7,8 +7,6 @@ export default () => {
     query {
         file(relativePath: { eq: "demo/amanda-frank-tvw_dg4UYzU-unsplash.jpg" }) {
           childImageSharp {
-            # Specify the image processing specifications right in the query.
-            # Makes it trivial to update as your page's design changes.
             fluid(maxWidth: 1240) {
               ...GatsbyImageSharpFluid
             }

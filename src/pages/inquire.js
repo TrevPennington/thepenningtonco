@@ -4,8 +4,8 @@ import Form from "../components/form"
 
 export default () => {
     return (
-    <Layout location={`inquire`}>
-        <Form />
-    </Layout>
+        <Layout location={`inquire`}>
+            <Form />
+        </Layout>
     )
 }

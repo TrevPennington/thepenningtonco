@@ -1,8 +1,3 @@
-.headerWrapper {
-    height: 15vh;
-    background-color: rgba(0,0,0,.05);
-}
-
 .navBar {
     display: flex;
     flex-direction: row;
@@ -27,14 +22,14 @@ h1 > *, h2 > * {
     font-family: serif;
     font-weight: 200;
     text-transform: uppercase;
-    font-size: .7em;
+    font-size: .6em;
     letter-spacing: 2px;
-}
-
-.hero {
-    height: 90vh;
 }
 
 .dark > *{
     color: #333;
+}
+
+.navLogo {
+    margin-top: -8px;
 }

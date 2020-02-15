@@ -1,0 +1,17 @@
+:root {
+    --text-color: #999;
+}
+
+.recentsWrapper {
+    position: relative;
+    top: 20vh;
+}
+
+.heading {
+    color: var(--text-color);
+}
+
+.title {
+    position: relative;
+    color: var(--text-color);
+}

@@ -28,8 +28,18 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+
+    {
+      resolve: `gatsby-source-prismic-graphql`,
+      options: {
+        repositoryName: 'thePenningtonCo',
+        pages: [{
+          type: 'Post',          // Custom type of the document
+          match: '/blog/:uid',   // Pages will be generated in this pattern
+          path: '/blog-preview', // Placeholder route for previews
+          component: require.resolve('./src/templates/post.js') // Template file
+        }]
+      }
+    },
   ],
 }

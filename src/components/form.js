@@ -21,14 +21,14 @@ export default () => {
 
     return (
         <div className='formWrapper'>
-          <Img
+          {/* <Img
               fluid={data.titlePhoto.childImageSharp.fluid}
               alt='hero image'
               style={{ 
                 height: `30vh`,
                 }}
                 className='hero'
-          />
+          /> */}
 
           <div className='contactCta'>
 

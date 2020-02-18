@@ -1,17 +1,28 @@
 :root {
-    --text-color: #999;
+    --text-color: #555;
 }
 
 .recentsWrapper {
-    position: relative;
-    top: 20vh;
+    height: 500px;
 }
 
 .heading {
     color: var(--text-color);
 }
 
+.link {
+    text-decoration: none;
+}
+
 .title {
-    position: relative;
     color: var(--text-color);
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 100;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+}
+
+.image {
+    height: 250px;
 }

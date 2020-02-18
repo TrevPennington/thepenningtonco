@@ -1,14 +1,37 @@
+.homeHeaderWrapper {
+    height: 100vh;
+    position: relative;
+}
+
+.heroImage {
+    position: absolute;
+    top: 0;
+    height: 100vh;
+}
+
+.minorHero {
+    position: absolute;
+    top: 0;
+    height: 40vh;
+    
+}
+
+.navWrapper {
+    position: absolute;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+}
+
 .navBar {
+
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-around;
     padding-top: 20px;
     z-index: 999;
-    position: absolute;
-    top: 0;
-    left: 10%;
-    right: 10%;
+    background-color: transparent;
 }
 
 .navBar > * {

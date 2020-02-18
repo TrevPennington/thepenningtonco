@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Layout from "../components/layout" 
-import RecentBlock from "../components/recentBlock"
+import Layout from "../components/layout"
+
 
 export const data = graphql`
 query {
@@ -19,14 +19,14 @@ query {
 
 }`
 
+
 export default ({ data }) => {
     return (
         <Layout 
-          location={`recent`}
+          location='about'
           image={data.hero.childImageSharp.fluid}
         >
-            <RecentBlock />
+            <h1>hi</h1>
         </Layout>
     )
 }
-

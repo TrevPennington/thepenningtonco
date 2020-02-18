@@ -44,7 +44,7 @@
     margin: auto;
     margin-top: 70px;
     margin-bottom: 35px;
-    width: 500px;
+    width: 450px;
     height: 600px;
 
     display: flex;
@@ -61,6 +61,11 @@
 
     background-color: transparent;
     border: 1px solid var(--form-font-fade);
+
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-size: .6em;
+    letter-spacing: 1px;
 }
 
 ::placeholder, #f4{
@@ -69,7 +74,7 @@
 
     text-transform: uppercase;
     font-family: sans-serif;
-    font-size: .7em;
+    font-size: .6em;
     letter-spacing: 1px;
 }
 
@@ -89,6 +94,11 @@ input:focus, textarea:focus {
 
 #f4 {
     text-align: center;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-size: .55em;
+    letter-spacing: 1px;
+    padding-left: 30px;
 }
 
 #moreAbout {
@@ -113,4 +123,20 @@ input:focus, textarea:focus {
 
 .submitForm:hover {
     background-color: var(--submit-hover);
+}
+
+
+/* Change Autocomplete styles in Chrome*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0 30px var(--form-background) inset !important;
+    background-color: var(--form-background);
+    border: 1px solid var(--form-font-fade);
 }

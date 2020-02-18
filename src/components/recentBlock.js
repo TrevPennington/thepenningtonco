@@ -56,22 +56,20 @@ export default () => {
                 })}
                 </div> */}
 
-            <div>
+            {/* <div>
               <img src={doc.node.image.url} alt={doc.node.image.alt} /> 
               <h1>{RichText.asText(doc.node.headline)}</h1>
               <p>{RichText.asText(doc.node.description)}</p>
-          </div>
+          </div> */}
 
             <div>
               {posts.map(post => {
                 return (
                   <div key={post.node._meta.id}>
-                    <Link to={linkResolver(post.node._meta)}>
-                      {RichText.asText(post.node.title)}
+                    <Link to={linkResolver(post.node._meta)} className='link'>
+                      <img className='image' src={doc.node.image.url} alt={doc.node.image.alt} /> 
+                      <h1 className='title'>{RichText.asText(post.node.title)}</h1>
                     </Link>
-                    <p>
-                      <time>{post.node.date}</time>
-                    </p>
                   </div>
                 )
               })}

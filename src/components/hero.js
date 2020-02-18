@@ -22,7 +22,7 @@ export default () => {
               alt='Home hero image'
               style={{ 
                 height: `100vh`,
-                position: `relative`,
+                zIndex: '0',
                 }}
             />
         </div>

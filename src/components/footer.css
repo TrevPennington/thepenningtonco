@@ -1,18 +1,16 @@
 .footerWrapper {
     height: 6vh;
-    background-color: #333;
-    margin-bottom: 0;
-    position: relative;
-    bottom: 0px;
+    background-color: #555;
 }
 
 .footerCreator {
-    color: #555;
+    color: #efefef;
     text-align: center;
     font-family: serif;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 0.8em;
+    letter-spacing: 2.8px;
+    font-size: 0.5em;
+    font-weight: 100;
 
     position: relative;
     top: 20%;

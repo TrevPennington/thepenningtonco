@@ -7,6 +7,7 @@
 
 import React from "react"
 import { Link } from "gatsby"
+import Img from "gatsby-image"
 import PropTypes from "prop-types"
 import Hero from "./hero"
 import Footer from "./footer"
@@ -20,37 +21,47 @@ class Layout extends React.Component {
   
 
   
-  const { location, children } = this.props
+  const { location, children, image } = this.props
 
   let header 
 
   if (location === `home`) {
     header = (
       <header className = "homeHeaderWrapper" >
-        <Hero className = 'hero' />
-      <nav className='navBar'>
-        <h2 className='navRecent'>
-          <Link to="/recent">
-            Recent
-          </Link>
-        </h2>
-        <h1 className='navLogo'>
-          <Link to="/">
-          {/* TODO: Make this a variable */}
-            <img src={mainlogo} alt='The Pennington Co.' width='120' height='120' className='mainLogo' />
-          </Link>
-        </h1>
-        <h2 className='inquire'>
-          <Link to="/inquire">
-            Inquire
-          </Link>
-        </h2>
-      </nav>
+        
+        <div className = 'navWrapper'>
+        <nav className='navBar'>
+          <h2 className='navRecent'>
+            <Link to="/recent">
+              Recent
+            </Link>
+          </h2>
+          <h1 className='navLogo'>
+            <Link to="/">
+            {/* TODO: Make this a variable */}
+              <img src={mainlogo} alt='The Pennington Co.' width='120' height='120' className='mainLogo' />
+            </Link>
+          </h1>
+          <h2 className='inquire'>
+            <Link to="/inquire">
+              Inquire
+            </Link>
+          </h2>
+        </nav>
+        </div>
+
+        <Img
+          fluid={image}
+          className='heroImage'
+        />
+
     </header>
     )
   } else {
     header = (
       <header className = "headerWrapper">
+
+      <div className = 'navWrapper'>
       <nav className='navBar'>
         <h2 className='navRecent dark'>
           <Link to="/recent">
@@ -68,6 +79,13 @@ class Layout extends React.Component {
           </Link>
         </h2>
       </nav>
+      </div>
+
+      <Img
+        fluid={image}
+        className='minorHero'
+      />
+
     </header>
     )
   }

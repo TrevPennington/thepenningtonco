@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
+import AboutPage from "../components/aboutPage"
 
 
 export const data = graphql`
@@ -26,7 +27,7 @@ export default ({ data }) => {
           location='about'
           image={data.hero.childImageSharp.fluid}
         >
-            <h1>hi</h1>
+            <AboutPage />
         </Layout>
     )
 }

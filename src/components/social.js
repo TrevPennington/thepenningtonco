@@ -26,37 +26,35 @@ export default () => {
     query {
         one: file(relativePath: { eq: "social/amanda-frank-tvw_dg4UYzU-unsplash.jpg" }) {
           childImageSharp {
-            fixed(width: 100, height: 100) {
-              ...GatsbyImageSharpFixed
+            fluid(maxWidth: 200, maxHeight: 200, quality: 100) {
+              ...GatsbyImageSharpFluid
             }
           }
         }
 
         two: file(relativePath: { eq: "social/bence-balla-schottner-V2x4jJKYJ7I-unsplash.jpg" }) {
           childImageSharp {
-            fixed(width: 100, height: 100) {
-              ...GatsbyImageSharpFixed
+            fluid(maxWidth: 200, maxHeight: 200, quality: 100) {
+              ...GatsbyImageSharpFluid
             }
           }
         }
 
         three: file(relativePath: { eq: "social/dimitar-donovski-4fQifsKKfO4-unsplash.jpg" }) {
           childImageSharp {
-            fixed(width: 100, height: 100) {
-              ...GatsbyImageSharpFixed
+            fluid(maxWidth: 200, maxHeight: 200, quality: 100) {
+              ...GatsbyImageSharpFluid
             }
           }
         }
 
         four: file(relativePath: { eq: "social/esther-tuttle-m9SAITsAU8s-unsplash.jpg" }) {
           childImageSharp {
-            fixed(width: 100, height: 100) {
-              ...GatsbyImageSharpFixed
+            fluid(maxWidth: 200, maxHeight: 200, quality: 100) {
+              ...GatsbyImageSharpFluid
             }
           }
         }
-
-
  
       }
     `)
@@ -81,10 +79,10 @@ export default () => {
             </div> */}
 
             <div className='socialPhotos'>
-              <Img fixed={data.one.childImageSharp.fixed} />
-              <Img fixed={data.two.childImageSharp.fixed} />
-              <Img fixed={data.three.childImageSharp.fixed} />
-              <Img fixed={data.four.childImageSharp.fixed} />
+              <Img fluid={data.one.childImageSharp.fluid} alt='Gerold' />
+              <Img fluid={data.two.childImageSharp.fluid} alt='Gerold' />
+              <Img fluid={data.three.childImageSharp.fluid} alt='Gerold' />
+              <Img fluid={data.four.childImageSharp.fluid} alt='Gerold' />
             </div>
             
         </div>

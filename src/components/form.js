@@ -36,7 +36,6 @@ export default () => {
               <p className='ctaBody'>Trevor and I would love to get to know you and take your photos. Whether it be wedding, elopement, engagement, or a portrait session. Please fill out the form below for availability and pricing info! We are always down to meet for coffee or talk on the phone. We will get back to you within 48 hours.</p>
           </div>
   
-  
           <form name='inquiry' method='POST' className='contactForm' netlify="true" >
                   <input type="hidden" name="inquiry" value="inquiry" />
                   

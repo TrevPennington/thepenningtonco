@@ -17,7 +17,7 @@ const IndexPage = ({ data }) => (
     
     <SEO title="Home" />
     <About />
-    <RecentSection />
+
     <Social />
   </Layout>
 )

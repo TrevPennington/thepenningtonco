@@ -15,7 +15,7 @@ export default () => {
          }
        }
 
-       portrait: file(relativePath: { eq: "about/josh-hild-8f_VQ3EFbTg-unsplash.jpg" }) {
+       portrait: file(relativePath: { eq: "josh-hild-8f_VQ3EFbTg-unsplash.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 400, quality: 100) {
             ...GatsbyImageSharpFluid

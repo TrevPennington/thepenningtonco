@@ -7,15 +7,30 @@ import { PinterestAlt } from "styled-icons/boxicons-logos/PinterestAlt";
 
 const Insta = styled(Instagram)`
     color: whitesmoke;
+    transition-duration: 0.2s;
+    &:hover {
+        transform: scale(1.2);
+        transition-duration: 0.2s;
+    }
 `
 
 const Faceboo = styled(Facebook)`
     color: whitesmoke;
     transform: translateY(-2px);
+    transition-duration: 0.2s;
+    &:hover {
+        transform: scale(1.2);
+        transition-duration: 0.2s;
+    }
 `
 
 const Pinterest = styled(PinterestAlt)`
     color: whitesmoke;
+    transition-duration: 0.2s;
+    &:hover {
+        transform: scale(1.2);
+        transition-duration: 0.2s;
+    }
 `
 
 const Footer = () => (

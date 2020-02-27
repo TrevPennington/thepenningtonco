@@ -3,6 +3,8 @@ import "./aboutPage.css"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 
+import Test from "../components/test"
+
 export default () => {
 
   const data = useStaticQuery(graphql`
@@ -42,6 +44,7 @@ export default () => {
             <div className='contact'>
                 <h1 className='contactTitle titleFormat'>Let's grab some coffee.</h1>
                 <Link to="/inquire"> <button className='contactLink'>inquire</button></Link>
+                {/* <Test /> */}
             </div>
         </div>
     </div>

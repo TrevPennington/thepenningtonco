@@ -5,7 +5,7 @@ import SEO from "../components/seo"
 import About from "../components/about"
 import Social from "../components/social"
 import RecentSection from "../components/recentSection"
-
+ 
 
 
 const IndexPage = ({ data }) => (
@@ -13,10 +13,18 @@ const IndexPage = ({ data }) => (
     location={`home`}
     image={data.hero.childImageSharp.fluid}
   >
-    
-    
     <SEO title="Home" />
     <About />
+
+
+
+
+
+
+
+
+    <img  />
+
 
     <Social />
   </Layout>

@@ -1,20 +1,36 @@
+const path = require(`path`)
+
 module.exports = {
   siteMetadata: {
     title: `The Pennington Co.`,
-    description: `Husband and wife wedding photographers from Raleigh, NC`,
+    description: `Raleigh, NC`,
     author: `Trevor Pennington`,
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    `gatsby-plugin-styled-components`,
+
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
+    },
+
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-styled-components`,
+    // `gatsby-transformer-remark`,
+
+    {
+      resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1500,
+              withWebp: true,
+              showCaptions: true,
+              quality: 100,
+              
+            },
     },
 
     {

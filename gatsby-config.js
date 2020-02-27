@@ -46,17 +46,17 @@ module.exports = {
       },
     },
 
-    {
-      resolve: `gatsby-source-prismic-graphql`,
-      options: {
-        repositoryName: 'thePenningtonCo',
-        pages: [{
-          type: 'Post',          // Custom type of the document
-          match: '/blog/:uid',   // Pages will be generated in this pattern
-          path: '/blog-preview', // Placeholder route for previews
-          component: require.resolve('./src/templates/post.js') // Template file
-        }]
-      }
-    },
+    // {
+    //   resolve: `gatsby-source-prismic-graphql`,
+    //   options: {
+    //     repositoryName: 'thePenningtonCo',
+    //     pages: [{
+    //       type: 'Post',          // Custom type of the document
+    //       match: '/blog/:uid',   // Pages will be generated in this pattern
+    //       path: '/blog-preview', // Placeholder route for previews
+    //       component: require.resolve('./src/templates/post.js') // Template file
+    //     }]
+    //   }
+    // },
   ],
 }

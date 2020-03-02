@@ -1,6 +1,6 @@
 .aboutWrapper {
-    margin-left: 15vw;
-    margin-right: 15vw;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .about {
@@ -26,7 +26,8 @@
 .aboutText {
 
     text-align: center;
-    width: 350px;
+    width: 60vw;
+    max-width: 400px;
 }
 
 .aboutTitle {

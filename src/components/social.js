@@ -62,9 +62,7 @@ export default () => {
 
     return (
         <div className='socialWrapper'>
-            <div className='socialTitle'>
-                <h1>Follow Along!</h1>
-            </div>
+
             {/* <div className='socialPhotos'>
                 {data.allFile.edges.map(node =>
                     
@@ -83,6 +81,10 @@ export default () => {
               <Img fluid={data.two.childImageSharp.fluid} alt='Gerold' />
               <Img fluid={data.three.childImageSharp.fluid} alt='Gerold' />
               <Img fluid={data.four.childImageSharp.fluid} alt='Gerold' />
+            </div>
+
+            <div className='socialTitle'>
+                <h1>Follow Along!</h1>
             </div>
             
         </div>

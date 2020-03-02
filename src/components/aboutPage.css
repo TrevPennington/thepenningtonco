@@ -1,5 +1,5 @@
 .aboutPageWrapper {
-    margin-top: -100px;
+    margin-top: 50px;
     margin-bottom: 10vw;
     margin-left: 15vw;
     margin-right: 15vw;
@@ -15,22 +15,13 @@
 /* HEAD ================================== */
 
 .headWrapper {
-    margin-bottom: 5vw;
-}
-
-.headTitle {
-    width: 300px;
-    margin-right: minmax(10%, 90vw);
-    margin-left: auto;
-    text-align: right;
-
-    transform: translateY(280px);
-    z-index: 999;
+    margin-left: 12vw;
 }
 
 .portrait {
-    width: 60vw;
-    max-width: 400px;
+    width: 50vw;
+    max-width: 350px;
+    max-height: 450px;
     z-index: -1;
 
     transform: translateX(-40px);
@@ -38,8 +29,8 @@
 }
 
 .landscape {
-    width: 60vw;
-    max-width: 600px;
+    width: 50vw;
+    max-width: 400px;
     z-index: -1;
 
     transform: translateY(-160px) translateX(75px);
@@ -49,9 +40,15 @@
 /* TEXT ================================================== */
 
 .contentWrapper {
-    margin-top: -120px;
+    margin-top: -180px;
     width: 60vw;
     max-width: 400px;
+}
+
+.headTitle {
+    width: 300px;
+    text-align: left;
+    z-index: 999;
 }
 
 .text {
@@ -61,12 +58,12 @@
 .text p {
     letter-spacing: .8px;
     line-height: 30px;
-    
     font-size: .8em;
 }
 
-.contact {
-    
+.contactTitle {
+    font-size: 1.5em;
+    margin-bottom: 30px;
 }
 
 .contactLink {

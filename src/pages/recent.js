@@ -1,31 +1,56 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout" 
+import heroImage from "../components/heroImage"
+import PostLink from "../components/post-link"
 
-export const data = graphql`
-query {
-  hero: file(relativePath: { eq: "demo/amanda-frank-tvw_dg4UYzU-unsplash.jpg" }) {
-    childImageSharp {
-      fluid(
-        maxWidth: 1000
-        quality: 100
-      
-        ) {
-        ...GatsbyImageSharpFluid
+const Recent = ({
+  data: {
+    allMarkdownRemark: { edges },
+  },
+}) => {
+  const Posts = edges
+  .filter(edge => !!edge.node.frontmatter.date) //filter however you want
+  .map(edge => <PostLink key={edge.node.id} post={edge.node} />)
+
+  return (
+    <Layout 
+      location={`recent`}
+      image={heroImage} //TODO: make this WORK
+    >
+      <div className='postsWrapper'>{Posts}</div>
+    </Layout>
+)
+}
+
+export default Recent
+
+export const pageQuery = graphql`
+  query {
+    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+      edges {
+        node {
+          id
+          excerpt(pruneLength: 250)
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            path
+            title
+            photo {
+              childImageSharp {
+                  fluid(maxWidth: 500) {
+                      ...GatsbyImageSharpFluid
+                  }
+              }
+            }
+          }
+        }
       }
     }
   }
+`
 
-}`
-
-export default ({ data }) => {
-    return (
-        <Layout 
-          location={`recent`}
-          image={data.hero.childImageSharp.fluid}
-        >
-          <h1>hello</h1>
-        </Layout>
-    )
-}
+    
+  
+  
 

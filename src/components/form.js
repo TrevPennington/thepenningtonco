@@ -36,8 +36,11 @@ export default () => {
               <p className='ctaBody'>Trevor and I would love to get to know you and take your photos. Whether it be wedding, elopement, engagement, or a portrait session. Please fill out the form below for availability and pricing info! We are always down to meet for coffee or talk on the phone. We will get back to you within 48 hours.</p>
           </div>
   
-          <form name='inquiry' method='POST' className='contactForm' netlify="true" >
-                  <input type="hidden" name="inquiry" value="inquiry" />
+
+          {/* TODO : add a success page, like Squarepatch */}
+          <form name='inquiry' method='POST' className='contactForm' data-netlify="true" data-netlify-honeypot="bot-field" >
+                  <input type="hidden" name="bot-field" />
+                  <input type="hidden" name="form-name" value="inquiry" />
                   
                   <h4 className='formTitle'>say hello</h4>
     

@@ -1,12 +1,23 @@
 .post {
-    max-width: 500px;
+    max-width: 450px;
     width: 70vw;
     margin: auto;
     margin-bottom: 50px;
+    transition-duration: .15s;
+}
+
+.post:hover {
+    transform: scale(1.02);
+    transition-duration: .15s;
 }
 
 .postTitle {
     text-decoration: none;
     color: #333;
     font-size: 1.1em;
+    font-weight: 500;
+}
+
+a {
+    text-decoration: none;
 }

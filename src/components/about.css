@@ -9,25 +9,30 @@
     margin-bottom: 12vw;
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
     grid-template-rows: auto;
     grid-column-gap: 25px;
     grid-row-gap: 35px;
     justify-items: center;
     align-items: start; 
-
     background-color: white;
 }
 
 .aboutPhoto {
-
-}
+    
+}   
 
 .aboutText {
-
+    justify-self: start;
     text-align: center;
     width: 60vw;
     max-width: 400px;
+}
+
+@media (max-width: 939px) {
+    .aboutText {
+        justify-self: center;
+    }
 }
 
 .aboutTitle {

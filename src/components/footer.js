@@ -36,14 +36,16 @@ const Pinterest = styled(PinterestAlt)`
 const Footer = () => (
 
     <div className='footerWrapper'>
-        <div className='social'>
-            <a href="#"><Insta size="27px" /></a>
-            <a href="#"><Faceboo size="18px" /></a>
-            <a href="#"><Pinterest size="25px" /></a>
+        <div className='contentWrapper'>
+            <div className='social'>
+                <a href="#"><Insta size="27px" /></a>
+                <a href="#"><Faceboo size="18px" /></a>
+                <a href="#"><Pinterest size="25px" /></a>
+            </div>
+            <h1 className='footerCreator'>
+                <a href="https://www.trevorpennington.com/">created by Trevor Pennington</a>
+            </h1>
         </div>
-        <h1 className='footerCreator'>
-            <a href="#">created by Trevor Pennington</a>
-        </h1>
     </div>
 )
 

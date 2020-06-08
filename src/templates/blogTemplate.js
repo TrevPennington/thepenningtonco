@@ -1,6 +1,45 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
+import styled from "styled-components"
+
+const Container = styled.div`
+    margin: auto;
+`
+
+const Title = styled.h1`
+    text-align: center;
+    margin: auto;
+    margin-top: -120px;
+    line-height: 2.5rem;
+`
+
+const Date = styled.h3`
+    text-align: center;
+    margin: auto;
+    font-size: 15px;
+`
+
+const Description = styled.h2`
+    text-align: center;
+    margin: auto;
+    line-height: 2.5rem;
+    margin-bottom: 50px;
+    font-weight: 100;
+    font-size: 20px;
+`
+
+const Content = styled.div`
+    width: 50vw;
+    margin: auto;
+    line-height: 4.7px;
+
+    @media(max-width: 840px){
+        line-height: 2.2px;
+    }
+`
+
+
 
 export default function Template({
     data, //this prop will be injected by the GraphQL query below.
@@ -12,17 +51,14 @@ export default function Template({
             location='recent'
             image='hi'
             >
-            <div className='blog-post-container'>
+            <Container>
                 <div className='blog-post'>
-                    <h1>{frontmatter.title}</h1>
-                    <h2>{frontmatter.date}</h2>
-                    <h3>{frontmatter.description}</h3>
-                    <div
-                        className='blog-post-content'
-                        dangerouslySetInnerHTML={{ __html: html }}
-                    />
+                    <Title>{frontmatter.title}</Title>
+                    <Date>{frontmatter.date}</Date>
+                    <Description>{frontmatter.description}</Description>
+                    <Content dangerouslySetInnerHTML={{ __html: html }} />
                 </div>
-            </div>
+            </Container>
         </Layout>
     )
 }
@@ -30,21 +66,12 @@ export default function Template({
 export const PageQuery = graphql`
     query($path: String!) {
         markdownRemark(frontmatter: { path: { eq: $path } }) {
-            html
-            frontmatter {
-                date(formatString: "MMMM DD, YYYY")
-                path
-                title
-                description
-                link
-                photo {
-                    childImageSharp {
-                        fluid(maxWidth: 500) {
-                            ...GatsbyImageSharpFluid
-                        }
-                    }
+                    html
+                  frontmatter {
+                    description
+                    photos
+                    title
+                  }
                 }
-            }
-        }
     }
 `

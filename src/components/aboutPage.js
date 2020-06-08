@@ -11,7 +11,7 @@ export default () => {
 
   const data = useStaticQuery(graphql`
    query {
-       landscape: file(relativePath: { eq: "about/alex-iby-Hkk04Pb4b4E-unsplash.jpg" }) {
+       landscape: file(relativePath: { eq: "about/usthree.jpg" }) {
          childImageSharp {
            fluid(maxWidth: 600, quality: 100) {
              ...GatsbyImageSharpFluid
@@ -19,7 +19,7 @@ export default () => {
          }
        }
 
-       portrait: file(relativePath: { eq: "josh-hild-8f_VQ3EFbTg-unsplash.jpg" }) {
+       portrait: file(relativePath: { eq: "about/kitters.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 400, quality: 100) {
             ...GatsbyImageSharpFluid

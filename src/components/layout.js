@@ -25,7 +25,7 @@ class Layout extends React.Component {
 
   let header 
 
-  if (location === `home`) {
+  if (location === `home`) { // ============================ HOME
     header = (
       <header className = "homeHeaderWrapper" >
         
@@ -57,7 +57,7 @@ class Layout extends React.Component {
 
     </header>
     )
-  } else {
+  } else if (location === `recent` || location === `about`) { //================================================== DARK (not home)
     header = (
       <header className = "headerWrapper">
 
@@ -71,6 +71,7 @@ class Layout extends React.Component {
         <h1 className='navLogo dark'>
           <Link to="/">
             <img src={secondlogo} alt='The Pennington Co.' width='120' height='120' className='mainLogo'/>
+            
           </Link>
         </h1>
         <h2 className='inquire dark'>
@@ -88,19 +89,48 @@ class Layout extends React.Component {
 
     </header>
     )
+  } else { //================================================================ LIGHT
+    header = (
+      <header className = "headerWrapper">
+
+      <div className = 'navWrapper'>
+      <nav className='navBar'>
+        <h2 className='navRecent'>
+          <Link to="/recent">
+            Recent
+          </Link>
+        </h2>
+        <h1 className='navLogo dark'>
+          <Link to="/">
+            <img src={mainlogo} alt='The Pennington Co.' width='120' height='120' className='mainLogo'/>
+          </Link>
+        </h1>
+        <h2 className='inquire'>
+          <Link to="/inquire">
+            Inquire
+          </Link>
+        </h2>
+      </nav>
+      </div>
+
+      <Img
+        fluid={image}
+        className='minorHero'
+      />
+
+    </header>
+    )
   }
   return (
     <>
-      <header siteTitle={`Trevor and Shelby Pennington`}>
-        {header}
-      </header>
-      <div>
+      <div style={{marginBottom: `200px`}}>
+        <header siteTitle={`Trevor and Shelby Pennington`}>
+          {header}
+        </header>
         <main>{children}</main>
+      </div>
+      <div style={{position: 'relative', bottom: `-120px`, width: `100%`}}>
         <Footer />
-          {/* © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer> */}
       </div>
     </>
   )

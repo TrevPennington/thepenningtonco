@@ -7,6 +7,32 @@ module.exports = {
     author: `Trevor Pennington`,
   },
   plugins: [
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1500,
+              quality: 100,
+              // wrapperStyle: 'margin-bottom:100px' **This also does not work for me
+            },
+          },
+          `remark-image-attributes`,
+          {
+            resolve: `gatsby-remark-image-attributes`,
+            options: {
+              styleAttributes: [`margin-bottom`],
+            },
+          }
+        ],
+      },
+    },
+    `gatsby-transformer-sharp`,
+
 
     {
       resolve: `gatsby-source-filesystem`,
@@ -23,23 +49,11 @@ module.exports = {
         path: `${__dirname}/src/markdown-pages`,
       },
     },
-    `gatsby-transformer-remark`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    
+
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
-    // `gatsby-transformer-remark`,
 
-    {
-      resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 1500,
-              withWebp: true,
-              showCaptions: true,
-              quality: 100,
-              
-            },
-    },
 
     {
       resolve: `gatsby-plugin-manifest`,
@@ -50,21 +64,8 @@ module.exports = {
         background_color: `white`,
         theme_color: `white`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        
       },
     },
-
-    // {
-    //   resolve: `gatsby-source-prismic-graphql`,
-    //   options: {
-    //     repositoryName: 'thePenningtonCo',
-    //     pages: [{
-    //       type: 'Post',          // Custom type of the document
-    //       match: '/blog/:uid',   // Pages will be generated in this pattern
-    //       path: '/blog-preview', // Placeholder route for previews
-    //       component: require.resolve('./src/templates/post.js') // Template file
-    //     }]
-    //   }
-    // },
   ],
 }

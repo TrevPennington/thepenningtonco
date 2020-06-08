@@ -1,8 +1,13 @@
 .footerWrapper {
-    height: 60px;
-    width: 100%;
-    margin: auto;
+   
     background-color: #555;
+    margin-bottom: 0;
+}
+
+.contentWrapper {
+    height: 60px;
+    width: 60%;
+    margin: auto;
     display: flex;
     flex-direction: column nowrap;
     justify-content: space-between;

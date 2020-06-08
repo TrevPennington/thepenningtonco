@@ -3,6 +3,16 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout" 
 import heroImage from "../components/heroImage"
 import PostLink from "../components/post-link"
+import styled from 'styled-components'
+
+const Title = styled.h1`
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  letter-spacing: 1.5px;
+  margin-top: -100px;
+  margin-bottom: 100px;
+`
 
 const Recent = ({
   data: {
@@ -18,6 +28,7 @@ const Recent = ({
       location={`recent`}
       image={heroImage} //TODO: make this WORK
     >
+      <Title>Recent stories</Title>
       <div className='postsWrapper'>{Posts}</div>
     </Layout>
 )
@@ -36,18 +47,19 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             path
             title
-            photo {
+            coverPhoto {
               childImageSharp {
                   fluid(maxWidth: 500) {
+                      src
                       ...GatsbyImageSharpFluid
                   }
               }
-            }
           }
         }
       }
     }
   }
+}
 `
 
     

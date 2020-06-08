@@ -24,7 +24,7 @@ export default () => {
 
     const data = useStaticQuery(graphql`
     query {
-        one: file(relativePath: { eq: "social/amanda-frank-tvw_dg4UYzU-unsplash.jpg" }) {
+        one: file(relativePath: { eq: "social/3L8A2085.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 200, maxHeight: 200, quality: 100) {
               ...GatsbyImageSharpFluid
@@ -32,7 +32,7 @@ export default () => {
           }
         }
 
-        two: file(relativePath: { eq: "social/bence-balla-schottner-V2x4jJKYJ7I-unsplash.jpg" }) {
+        two: file(relativePath: { eq: "social/C92A8821.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 200, maxHeight: 200, quality: 100) {
               ...GatsbyImageSharpFluid
@@ -40,7 +40,7 @@ export default () => {
           }
         }
 
-        three: file(relativePath: { eq: "social/dimitar-donovski-4fQifsKKfO4-unsplash.jpg" }) {
+        three: file(relativePath: { eq: "social/3L8A5272.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 200, maxHeight: 200, quality: 100) {
               ...GatsbyImageSharpFluid
@@ -48,7 +48,7 @@ export default () => {
           }
         }
 
-        four: file(relativePath: { eq: "social/esther-tuttle-m9SAITsAU8s-unsplash.jpg" }) {
+        four: file(relativePath: { eq: "social/3L8A6266.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 200, maxHeight: 200, quality: 100) {
               ...GatsbyImageSharpFluid
@@ -77,14 +77,14 @@ export default () => {
             </div> */}
 
             <div className='socialPhotos'>
-              <Img fluid={data.one.childImageSharp.fluid} alt='Gerold' />
-              <Img fluid={data.two.childImageSharp.fluid} alt='Gerold' />
-              <Img fluid={data.three.childImageSharp.fluid} alt='Gerold' />
-              <Img fluid={data.four.childImageSharp.fluid} alt='Gerold' />
+              <Img fluid={data.one.childImageSharp.fluid} alt='the pennington co instagram' />
+              <Img fluid={data.two.childImageSharp.fluid} alt='the pennington co instagram' />
+              <Img fluid={data.three.childImageSharp.fluid} alt='the pennington co instagram' />
+              <Img fluid={data.four.childImageSharp.fluid} alt='the pennington co instagram' />
             </div>
 
             <div className='socialTitle'>
-                <h1>Follow Along!</h1>
+                <h1>Follow Along</h1>
             </div>
             
         </div>

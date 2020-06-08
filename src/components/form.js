@@ -42,7 +42,7 @@ export default () => {
                   <input type="hidden" name="bot-field" />
                   <input type="hidden" name="form-name" value="inquiry" />
                   
-                  <h4 className='formTitle'>say hello</h4>
+                  <h4 className='formTitle'>say hello 👋</h4>
     
                   <input id='f1' type='text' name='name' required 
                     placeholder="full name*"/>

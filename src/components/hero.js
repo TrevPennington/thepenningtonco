@@ -5,7 +5,7 @@ import React from "react"
 export default () => {
     const data = useStaticQuery(graphql`
     query {
-        file(relativePath: { eq: "demo/amanda-frank-tvw_dg4UYzU-unsplash.jpg" }) {
+        file(relativePath: { eq: "demo/fail.jpeg" }) {
           childImageSharp {
             fluid(maxWidth: 1240) {
               ...GatsbyImageSharpFluid

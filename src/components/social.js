@@ -5,23 +5,6 @@ import "./social.css"
 
 export default () => {
 
-    // const data = useStaticQuery(graphql`
-    //   query {
-    //     allFile(filter:{extension:{regex:"/social/"}}) {
-    //       edges {
-    //         node {
-    //           childImageSharp {
-    //             fixed(width: 150, height: 150) {
-    //                 ...GatsbyImageSharpFixed
-    //             }
-    //           }
-    //         }
-    //       }
-    //     }
-    //   }
-
-    // `)
-
     const data = useStaticQuery(graphql`
     query {
         one: file(relativePath: { eq: "social/3L8A2085.jpg" }) {
@@ -62,19 +45,6 @@ export default () => {
 
     return (
         <div className='socialWrapper'>
-
-            {/* <div className='socialPhotos'>
-                {data.allFile.edges.map(node =>
-                    
-                    <Img 
-                      className='image'
-                      key={node}
-                      title="Photo image"
-                      alt="Photo"
-                      fixed={node.childImageSharp.fixed}
-                    />
-                    )}
-            </div> */}
 
             <div className='socialPhotos'>
               <Img fluid={data.one.childImageSharp.fluid} alt='the pennington co instagram' />

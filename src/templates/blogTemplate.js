@@ -12,6 +12,10 @@ const Title = styled.h1`
     margin: auto;
     margin-top: -120px;
     line-height: 2.5rem;
+    font-size: 1.2rem;
+    @media(max-width: 840px){
+        font-size: 1rem;
+    }
 `
 
 const Date = styled.h3`
@@ -26,7 +30,11 @@ const Description = styled.h2`
     line-height: 2.5rem;
     margin-bottom: 50px;
     font-weight: 100;
-    font-size: 20px;
+    font-size: 1rem;
+
+    @media(max-width: 840px){
+        font-size: 0.8rem;
+    }
 `
 
 const Content = styled.div`
@@ -35,7 +43,8 @@ const Content = styled.div`
     line-height: 4.7px;
 
     @media(max-width: 840px){
-        line-height: 2.2px;
+        line-height: 2.4px;
+        width: 70vw;
     }
 `
 

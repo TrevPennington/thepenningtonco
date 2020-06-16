@@ -2,9 +2,9 @@
 path: "/recent/unionstationelopement"
 date: "2020-03-01"
 title: "Raleigh Union Station Elopement"
-description: "engagement session"
+description: "Raleigh, NC"
 link: this will be a link
-coverPhoto: ../../images/home/C92A9911.jpg
+coverPhoto: ../../images/covers/unionstation.jpg
 photos: /NarrativeExport
 ---
 
@@ -49,12 +49,12 @@ photos: /NarrativeExport
 ![](/NarrativeExport/39_3L8A8885.jpg)  
 ![](/NarrativeExport/40_3L8A8909_3L8A8908.jpg)  
 ![](/NarrativeExport/41_3L8A8913.jpg)  
-![](/NarrativeExport/42_3L8A9010.jpg)  
+<!-- ![](/NarrativeExport/42_3L8A9010.jpg)  
 ![](/NarrativeExport/43_3L8A9015.jpg)  
 ![](/NarrativeExport/44_3L8A9027.jpg)  
 ![](/NarrativeExport/45_3L8A9023_3L8A9052.jpg)  
 ![](/NarrativeExport/46_3L8A9074.jpg)  
 ![](/NarrativeExport/47_3L8A9088.jpg)  
 ![](/NarrativeExport/48_3L8A9149-2.jpg)  
-![](/NarrativeExport/49_3L8A9231.jpg)  
-![](/NarrativeExport/50_C92A3412_C92A3415.jpg)  
+![](/NarrativeExport/49un.jpg)  
+![](/NarrativeExport/50un.jpg)   -->

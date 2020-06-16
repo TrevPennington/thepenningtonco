@@ -2,7 +2,7 @@
 path: "/recent/annex"
 date: "2020-05-01"
 title: "The Annex"
-description: "engagement session"
+description: "Wilmington, NC"
 link: this will be a link
 coverPhoto: ../../images/covers/annex.jpg
 photos: /NarrativeExport

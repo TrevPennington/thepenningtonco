@@ -2,9 +2,9 @@
 path: "/recent/octoberwedding"
 date: "2020-02-01"
 title: "Moody October Wedding"
-description: "wedding"
+description: "Lake O' The Woods"
 link: this will be a link
-coverPhoto: ../../images/home/C92A9911.jpg
+coverPhoto: ../../images/covers/babbs.jpg
 photos: /NarrativeExport
 ---
 

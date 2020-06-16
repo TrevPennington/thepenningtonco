@@ -2,9 +2,9 @@
 path: "/recent/wrightsvillebeach"
 date: "2020-03-01"
 title: "Wrightsville Beach morning"
-description: "engagement session"
+description: "Wilmington, NC"
 link: this will be a link
-coverPhoto: ../../images/home/C92A9911.jpg
+coverPhoto: ../../images/covers/wrightsville.jpg
 photos: /NarrativeExport
 ---
 

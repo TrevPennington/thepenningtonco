@@ -123,7 +123,7 @@ class Layout extends React.Component {
   }
   return (
     <>
-      <div style={{marginBottom: `200px`}}>
+      <div style={{marginBottom: `100px`}}>
         <header siteTitle={`Trevor and Shelby Pennington`}>
           {header}
         </header>

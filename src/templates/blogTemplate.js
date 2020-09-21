@@ -18,6 +18,7 @@ const Title = styled.h1`
     font-weight: 600;
     @media(max-width: 840px){
         font-size: 1rem;
+        margin-top: -90px;
     }
 `
 
@@ -29,6 +30,7 @@ const Date = styled.h3`
 `
 
 const Description = styled.h2`
+    color: #555;
     text-align: center;
     margin: auto;
     line-height: 2.5rem;
@@ -38,6 +40,7 @@ const Description = styled.h2`
 
     @media(max-width: 840px){
         font-size: 0.8rem;
+        line-height: 1.4em;
     }
 `
 
@@ -48,7 +51,7 @@ const Content = styled.div`
 
     @media(max-width: 840px){
         line-height: 2.4px;
-        width: 70vw;
+        width: 80vw;
     }
 `
 

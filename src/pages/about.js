@@ -6,7 +6,7 @@ import AboutPage from "../components/aboutPage"
 
 export const data = graphql`
 query {
-  hero: file(relativePath: { eq: "demo/amanda-frank-tvw_dg4UYzU-unsplash.jpg" }) {
+  hero: file(relativePath: { eq: "demo/tetonslandscape.jpg" }) {
     childImageSharp {
       fluid(
         maxWidth: 1000

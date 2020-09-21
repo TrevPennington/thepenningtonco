@@ -30,7 +30,6 @@ function Layout(props) {
   let header
   let menu
   let burgerMenu
-  let burgerDisplay
 
   useEffect(() => {
     // Update the document title using the browser API
@@ -58,8 +57,6 @@ function Layout(props) {
       console.log(burgerOpen)
      
     }
-
-
   }
 
   function renderMenu(dark) { //take in a color as props
@@ -148,7 +145,7 @@ function Layout(props) {
     header = (
       <header className = "homeHeaderWrapper" >
           {
-            renderMenu(true)
+            renderMenu(false)
           }
         <Img
           fluid={image}
@@ -192,7 +189,7 @@ function Layout(props) {
       <header className = "headerWrapper">
 
           {
-            renderMenu("black")
+            renderMenu(true)
           }
 
       <Img
@@ -236,7 +233,7 @@ function Layout(props) {
       <header className = "headerWrapper">
 
           {
-            renderMenu()
+            renderMenu(false)
           }
 
       <Img

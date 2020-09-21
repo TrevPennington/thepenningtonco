@@ -6,6 +6,7 @@
     display: flex;
     align-items: center;
     justify-items: space-between;
+    transition-duration: 0.3s;
 }
 
 .burgerNavLogo {
@@ -33,6 +34,7 @@
     display: flex;
     align-items: center;
     justify-items: space-between;
+    transition-duration: 0.3s;
 }
 
 .closeIcon {

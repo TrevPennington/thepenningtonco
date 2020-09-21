@@ -5,7 +5,7 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
+import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
 import Img from "gatsby-image"
 import PropTypes from "prop-types"
@@ -13,43 +13,143 @@ import Hero from "./hero"
 import Footer from "./footer"
 import "./layout.css"
 import "./header.css"
+import "./burgerHeader.css"
 import mainlogo from "../images/SVG/trevor+shelby light.svg"
 import secondlogo from "../images/SVG/trevor+shelby.svg"
+import styled from "styled-components"
+import { MenuAltRight } from "@styled-icons/boxicons-regular/MenuAltRight"
+import { Close } from "@styled-icons/remix-line/Close"
 
-class Layout extends React.Component {
-  render() {
+function Layout(props) {
+
+  const [burger, setBurger] = useState(false)
+  const [burgerOpen, setOpen] = useState(false)
   
+  const { location, children, image } = props
 
+  let header
+  let menu
+  let burgerMenu
+  let burgerDisplay
+
+  useEffect(() => {
+    // Update the document title using the browser API
+    checkBurger()
+    window.addEventListener('resize', checkBurger)
+
+    console.log(burgerOpen)
+  }, []);
+
+  function checkBurger() {
+    if (window.innerWidth < 700) {
+      setBurger(true)
+    } else {
+      setBurger(false)
+    }
+  }
   
-  const { location, children, image } = this.props
+  function toggleBurger() {
+    if (!burgerOpen) {
+      setOpen(true)
+      console.log(burgerOpen)
+   
+    } else {
+      setOpen(false)
+      console.log(burgerOpen)
+     
+    }
 
-  let header 
 
-  if (location === `home`) { // ============================ HOME
-    header = (
-      <header className = "homeHeaderWrapper" >
-        
-        <div className = 'navWrapper'>
-        <nav className='navBar'>
-          <h2 className='navRecent'>
-            <Link to="/recent">
-              Recent
-            </Link>
-          </h2>
-          <h1 className='navLogo'>
+  }
+
+  function renderMenu(dark) { //take in a color as props
+    if (burger && !burgerOpen) {
+      let logoColor
+      let closeIconColor
+      if (dark) {
+        closeIconColor = "black"
+        logoColor = (
+          <img src={secondlogo} alt='The Pennington Co.' width='150' height='150' style={{color:`black`}} />
+        )
+      } else {
+        closeIconColor = "#efefef"
+        logoColor = (
+          <img src={mainlogo} alt='The Pennington Co.' width='150' height='150' style={{color:`#efefef`}} />
+        )
+      }
+      burgerMenu = (
+        <div className = 'burgerNavWrapper'>
+          
+          <h1 className='burgerNavLogo'>
             <Link to="/">
-            {/* TODO: Make this a variable */}
-              <img src={mainlogo} alt='The Pennington Co.' width='120' height='120' className='mainLogo' />
+              {logoColor}
             </Link>
           </h1>
-          <h2 className='inquire'>
-            <Link to="/inquire">
-              Inquire
-            </Link>
-          </h2>
-        </nav>
+
+          <MenuAltRight className="burgerIcon" onClick={toggleBurger} style={{color:closeIconColor}} />
+
+        </div>
+      )
+      return (burgerMenu)
+    } else if (burger && burgerOpen) {
+
+      burgerMenu = (
+
+        <div className = 'burgerOpenNavWrapper'>
+          
+
+          <div className="burgerOpenMenuOptions">
+            <Link to="/"><h2>HOME</h2></Link>
+            <Link to="/recent"><h2>RECENT</h2></Link>
+            <Link to="/about"><h2>MEET US</h2></Link>
+            <Link to="/inquire"><h2>INQUIRE</h2></Link>
+          </div>
+
+          <Close className="closeIcon" onClick={toggleBurger} />
+
         </div>
 
+      )
+      return (burgerMenu)
+    } else if (!burger) {
+      return (menu)
+    }
+  }
+
+  if (location === `home`) { // ============================ HOME
+    menu = (
+      <div className = 'navWrapper'>
+      <nav className='navBar'>
+
+        <Link to="/" className='linkBox'>
+          <h2 className='navLink'>Home</h2>
+        </Link>
+
+        <Link to="/recent" className='linkBox'>
+          <h2 className='navLink'>Recent</h2>
+        </Link>
+
+        <h1 className='navLogo'>
+          <Link to="/">
+            <img src={mainlogo} alt='The Pennington Co.' width='150' height='150' className='mainLogo' />
+          </Link>
+        </h1>
+
+        <Link to="/about" className='linkBox'>
+          <h2 className='navLink'>meet us</h2>
+        </Link>
+
+        <Link to="/inquire" className='linkBox'>
+          <h2 className='navLink'>Inquire</h2>
+        </Link>
+      </nav>
+      </div>
+    )
+    header = (
+      <header className = "homeHeaderWrapper" >
+          {
+            renderMenu(true)
+          }
         <Img
           fluid={image}
           className='heroImage'
@@ -58,29 +158,42 @@ class Layout extends React.Component {
     </header>
     )
   } else if (location === `recent` || location === `about`) { //================================================== DARK (not home)
-    header = (
-      <header className = "headerWrapper">
-
+    menu = (
       <div className = 'navWrapper'>
       <nav className='navBar'>
-        <h2 className='navRecent dark'>
-          <Link to="/recent">
-            Recent
+
+          <Link to="/" className='linkBox'>
+              <h2 className='navLink dark'>Home</h2>
+            </Link>
+
+          <Link to="/recent" className='linkBox'>
+            <h2 className='navLink dark'>Recent</h2>
           </Link>
-        </h2>
-        <h1 className='navLogo dark'>
+
+        <h1 className='navLogo'>
           <Link to="/">
-            <img src={secondlogo} alt='The Pennington Co.' width='120' height='120' className='mainLogo'/>
+            <img src={secondlogo} alt='The Pennington Co.' width='150' height='150' className='mainLogo'/>
             
           </Link>
         </h1>
-        <h2 className='inquire dark'>
-          <Link to="/inquire">
-            Inquire
-          </Link>
-        </h2>
+
+        <Link to="/about" className='linkBox'>
+            <h2 className='navLink dark'>meet us</h2>
+        </Link>
+
+        <Link to="/inquire" className='linkBox'>
+            <h2 className='navLink dark'>Inquire</h2>
+        </Link>
       </nav>
       </div>
+    )
+    
+    header = (
+      <header className = "headerWrapper">
+
+          {
+            renderMenu("black")
+          }
 
       <Img
         fluid={image}
@@ -90,28 +203,41 @@ class Layout extends React.Component {
     </header>
     )
   } else { //================================================================ LIGHT
+    menu = (
+      <div className = 'navWrapper'>
+      <nav className='navBar'>
+
+            <Link to="/" className='linkBox'>
+              <h2 className='navLink'>Home</h2>
+            </Link>
+
+          <Link to="/recent" className='linkBox'>
+            <h2 className='navLink'>Recent</h2>
+          </Link>
+
+        <h1 className='navLogo'>
+          <Link to="/">
+            <img src={mainlogo} alt='The Pennington Co.' width='150' height='150' className='mainLogo'/>
+          </Link>
+        </h1>
+
+        <Link to="/about" className='linkBox'>
+              <h2 className='navLink'>meet us</h2>
+        </Link>
+
+        <Link to="/inquire" className='linkBox'>
+            <h2 className='navLink'>Inquire</h2>
+        </Link>
+
+      </nav>
+      </div>
+    )
     header = (
       <header className = "headerWrapper">
 
-      <div className = 'navWrapper'>
-      <nav className='navBar'>
-        <h2 className='navRecent'>
-          <Link to="/recent">
-            Recent
-          </Link>
-        </h2>
-        <h1 className='navLogo dark'>
-          <Link to="/">
-            <img src={mainlogo} alt='The Pennington Co.' width='120' height='120' className='mainLogo'/>
-          </Link>
-        </h1>
-        <h2 className='inquire'>
-          <Link to="/inquire">
-            Inquire
-          </Link>
-        </h2>
-      </nav>
-      </div>
+          {
+            renderMenu()
+          }
 
       <Img
         fluid={image}
@@ -121,6 +247,7 @@ class Layout extends React.Component {
     </header>
     )
   }
+
   return (
     <>
       <div style={{marginBottom: `100px`}}>
@@ -129,13 +256,13 @@ class Layout extends React.Component {
         </header>
         <main>{children}</main>
       </div>
-      <div style={{position: 'relative', bottom: `-120px`, width: `100%`}}>
+      <div style={{position: 'relative', bottom: `-20px`, width: `100%`}}>
         <Footer />
       </div>
     </>
   )
 }
-}
+
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
 }

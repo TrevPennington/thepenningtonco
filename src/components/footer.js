@@ -6,7 +6,7 @@ import { Facebook } from "styled-icons/icomoon/Facebook";
 import { PinterestAlt } from "styled-icons/boxicons-logos/PinterestAlt";
 
 const Insta = styled(Instagram)`
-    color: whitesmoke;
+    color: #333;
     transition-duration: 0.2s;
     &:hover {
         transform: scale(1.2);
@@ -15,7 +15,7 @@ const Insta = styled(Instagram)`
 `
 
 const Faceboo = styled(Facebook)`
-    color: whitesmoke;
+    color: #333;
     transform: translateY(-2px);
     transition-duration: 0.2s;
     &:hover {
@@ -25,7 +25,7 @@ const Faceboo = styled(Facebook)`
 `
 
 const Pinterest = styled(PinterestAlt)`
-    color: whitesmoke;
+    color: #333;
     transition-duration: 0.2s;
     &:hover {
         transform: scale(1.2);
@@ -43,7 +43,7 @@ const Footer = () => (
                 <a href="#"><Pinterest size="25px" /></a>
             </div>
             <h1 className='footerCreator'>
-                <a href="https://www.trevorpennington.com/">created by Trevor Pennington</a>
+                <a href="https://www.trevorpennington.com/" style={{color: `#333`}}>created by Trevor Pennington</a>
             </h1>
         </div>
     </div>

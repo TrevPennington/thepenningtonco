@@ -7,7 +7,7 @@ export default () => {
     query {
         file(relativePath: { eq: "demo/fail.jpeg" }) {
           childImageSharp {
-            fluid(maxWidth: 1240) {
+            fluid(maxWidth: 1500) {
               ...GatsbyImageSharpFluid
             }
           }

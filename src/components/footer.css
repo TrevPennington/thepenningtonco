@@ -1,11 +1,10 @@
 .footerWrapper {
-   
-    background-color: #555;
+    background-color: #efefef;
     margin-bottom: 0;
 }
 
 .contentWrapper {
-    height: 60px;
+    height: 100px;
     width: 60%;
     margin: auto;
     display: flex;
@@ -15,7 +14,7 @@
 }
 
 .social {
-    padding-left: 40px;
+    padding-left: 20px;
     width: 200px;
     display: flex;
     flex-direction: column nowrap;
@@ -24,14 +23,31 @@
 }
 
 .footerCreator {
-    color: #efefef;
+    color: #333;
     justify-self: flex-end;
     text-align: right;
-    padding-right: 40px;
-    font-family: serif;
+    padding-right: 20px;
+    font-family: sans-serif;
     text-transform: uppercase;
     letter-spacing: 2.8px;
     font-size: 0.6em;
     font-weight: 100;
-    line-height: 1.5em;
+    line-height: 2.5em;
+}
+
+@media (max-width: 800px) {
+    .contentWrapper {
+        width: 100%;
+    }
+
+    .social {
+        padding-left: 10px;
+        width: 150px;
+    }
+
+    .footerCreator {
+        padding-right: 0px;
+        font-size: 0.4em;
+        padding-right: 30px;
+    }
 }

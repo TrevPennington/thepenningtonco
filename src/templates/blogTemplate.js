@@ -12,7 +12,10 @@ const Title = styled.h1`
     margin: auto;
     margin-top: -120px;
     line-height: 2.5rem;
-    font-size: 1.2rem;
+    color: #333;
+    font-size: 1.7em;
+    font-family: sans-serif;
+    font-weight: 600;
     @media(max-width: 840px){
         font-size: 1rem;
     }
@@ -21,6 +24,7 @@ const Title = styled.h1`
 const Date = styled.h3`
     text-align: center;
     margin: auto;
+    font-family: sans-serif;
     font-size: 15px;
 `
 

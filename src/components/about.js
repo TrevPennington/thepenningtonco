@@ -21,6 +21,8 @@ export default () => {
      }
 
    `)
+
+   const aboutBodyText = "Hello there, we are Trevor and Shelby. We photograph couples at weddings, on mountain-tops, and in the city streets. Our vibe is super chill and we love being friends with the people we photograph."
   return (
     <div className='aboutWrapper'>
       <div className="about">
@@ -33,8 +35,8 @@ export default () => {
    
         <div className='aboutText'>
           <img src={logo} className='aboutTitle' width='90' height='90' alt='T+S' />
-          <p className='aboutBody'>Hello there, we are Trevor and Shelby. We photograph couples at weddings, on mountain-tops, and in the city streets. Our vibe is super chill and we love people who think they are bad in front of cameras, because we are too. </p>
-          <Link to='/inquire'><button className='usLink button'>say hello</button></Link>
+          <p className='aboutBody'>{aboutBodyText}</p>
+          <Link to='/about'><button className='usLink button'>more about us</button></Link>
         </div>
         
       </div>

@@ -6,7 +6,7 @@ query {
   hero: file(relativePath: { eq: "demo/amanda-frank-tvw_dg4UYzU-unsplash.jpg" }) {
     childImageSharp {
       fluid(
-        maxWidth: 1000
+        maxWidth: 1200
         quality: 100
       
         ) {

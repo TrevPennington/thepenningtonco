@@ -4,23 +4,41 @@
     --form-font-fade: rgba(51, 51, 51, 0.2);
     --submit-color: #333;
     --submit-hover: black;
+
+    overflow-x: hidden;
+
+}
+
+.formWrapper {
+    display: flex;
+    align-content: center;
 }
 
 .contactCta {
-    color: #555;
-    text-align: center;
-    width: 80vw;
-    max-width: 430px;
-    height: 340px;
+    justify-self: center;
     margin: auto;
-    padding-top: 50px;
-    margin-bottom: 10px;
+    margin-top: -900px;
+    color: #555;
+    
+    text-align: left;
+    width: 80vw;
+    max-width: 530px;
+}
 
-    position: relative;
-    top: 0vh;
+.contactCta::before {
+    content: '';
+    display: block;
+    width: 1100px;
+    height: 1320px;
+    margin: auto;
+    margin-bottom: -300px;
+    margin-left: -500px;
+    background-color: #f6f6f4;
+    overflow-x: hidden;
 }
 
 #ctaTitle {
+    font-family: sans-serif;
     font-size: 1.4em;
     letter-spacing: 3px;
 }
@@ -28,7 +46,6 @@
 .ctaBody {
     letter-spacing: .6px;
     line-height: 30px;
-    
     font-size: .8em;
 }
 
@@ -36,21 +53,23 @@
 /* FORM ====================================================================== */
 
 .contactForm {
-    background-color: var(--form-background);
-    color: var(--form-font);
-    /* border: 1px solid darkgrey; */
     padding: 15px;
     margin: auto;
-    margin-top: 10px;
-    margin-bottom: 35px;
+    margin-top: 300px;
+    margin-left: 20px;
     width: 80vw;
-    max-width: 450px;
-    height: 600px;
+    max-width: 550px;
+   
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: start;
+    margin-bottom: 100px;
+
+    color: var(--form-font);
+    border: 2.5px solid #777;
+
 }
 
 .contactForm > * {
@@ -62,20 +81,23 @@
     background-color: transparent;
     border: 1px solid var(--form-font-fade);
 
-    text-transform: uppercase;
+    
     font-family: sans-serif;
-    font-size: .6em;
+    font-size: 1em;
     letter-spacing: 1px;
 }
 
-::placeholder, #f4{
+::placeholder, #f4 {
     color: var(--form-font);
     opacity: 1;
 
-    text-transform: uppercase;
     font-family: sans-serif;
-    font-size: .6em;
+    font-size: 0.8em;
     letter-spacing: 1px;
+}
+
+#f4::placeholder {
+    font-size: 3em;
 }
 
 input:focus, textarea:focus {
@@ -83,13 +105,19 @@ input:focus, textarea:focus {
 }
 
 .formTitle {
-    border: none;
-    text-align: left;
-    font-size: 1.7em;
+    
+    font-family: sans-serif;
+    font-size: 1.4em;
     letter-spacing: 3px;
+
+    border: none;
     align-self: start;
     margin-bottom: 70px;
     margin-top: -30px;
+    width: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: white;
 }
 
 #f4 {
@@ -102,7 +130,7 @@ input:focus, textarea:focus {
 }
 
 #moreAbout {
-    height: 100px;
+    padding-bottom: 100px;
 }
 
 .submitForm {
@@ -140,3 +168,38 @@ select:-webkit-autofill:focus {
     background-color: var(--form-background);
     border: 1px solid var(--form-font-fade);
 }
+
+@media (max-width: 1200px) {
+    .formWrapper {
+        flex-direction: column;
+    }
+
+    .contactCta {
+        margin-top: -950px;
+        
+    }
+
+    .contactCta::before {
+        visibility: hidden;
+    }
+
+    .contactForm {
+        margin: auto;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 800px) {
+    .contactForm {
+        margin-top: 40px;
+    }
+
+    .contactForm > * {
+        font-size: 0.6em;
+    }
+
+    .formTitle {
+        font-size: 1em;
+    }
+}
+

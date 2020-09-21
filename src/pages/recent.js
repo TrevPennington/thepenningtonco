@@ -5,13 +5,42 @@ import heroImage from "../components/heroImage"
 import PostLink from "../components/post-link"
 import styled from 'styled-components'
 
+const PostWrapper = styled.div`
+  margin-top: 150px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  width: 80%;
+  margin: auto;
+`
+
+const LineBreak = styled.div`
+  
+`
+
 const Title = styled.h1`
-  width: 100%;
   margin: auto;
   text-align: center;
-  letter-spacing: 1.5px;
-  margin-top: -100px;
+  margin-top: -150px;
   margin-bottom: 100px;
+  color: #888;
+  
+  &::before {
+    content: '';
+    display: block;
+    width: 90%;
+    height: 500px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: -400px;
+    background-color: #f6f6f4;
+  }
+
+    @media (max-width: 400px) {
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+  
 `
 
 const Recent = ({
@@ -21,15 +50,20 @@ const Recent = ({
 }) => {
   const Posts = edges
   .filter(edge => !!edge.node.frontmatter.date) //filter however you want
-  .map(edge => <PostLink key={edge.node.id} post={edge.node} />)
+  .map(edge => 
+
+    <PostLink key={edge.node.id} post={edge.node} />
+
+  )
 
   return (
     <Layout 
       location={`recent`}
       image={heroImage} //TODO: make this WORK
     >
+      <LineBreak />
       <Title>Recent stories</Title>
-      <div className='postsWrapper'>{Posts}</div>
+      <PostWrapper>{Posts}</PostWrapper>
     </Layout>
 )
 }
@@ -49,7 +83,7 @@ export const pageQuery = graphql`
             title
             coverPhoto {
               childImageSharp {
-                  fluid(maxWidth: 500) {
+                  fluid(maxWidth: 900) {
                       src
                       ...GatsbyImageSharpFluid
                   }

@@ -1,8 +1,16 @@
-
+.socialWrapper {
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    background-color: #f6f6f4;
+    padding-bottom: 90px;
+    padding-top: 180px;
+    margin-bottom: -120px;
+}
 
 .socialTitle {
     width: 100%;
-    font-family: serif;
+    font-family: sans-serif;
     font-weight: 100;
     text-transform: uppercase;
     text-align: center;
@@ -25,7 +33,43 @@
     margin: 0.4vw;
 }
 
+.socialButton {
+    width: 280px;
+    margin: auto;
+    margin-top: 50px;
+    padding: 8px;
+    padding-right: 15px;
+    padding-left: 15px;
+    border: 1px solid #333;
+    background-color: transparent;
+}
+
+.socialButtonLink {
+    color: #333;
+}
+
+.socialButton:hover {
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+}
+
+.socialButton:hover > * {
+    color: white;
+}
+
+.socialButton:focus {
+    outline: none;
+}
+
+
+
 @media (max-width: 800px) {
+    .socialWrapper {
+        margin-top: 70px;
+        padding-top: 50px;
+    }
+
     .socialPhotos {
         width: 90vw;
     }

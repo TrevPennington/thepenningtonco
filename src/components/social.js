@@ -53,9 +53,8 @@ export default () => {
               <Img fluid={data.four.childImageSharp.fluid} alt='the pennington co instagram' />
             </div>
 
-            <div className='socialTitle'>
-                <h1>Follow Along</h1>
-            </div>
+            <button className="socialButton"><a href="http://instagram.com/thepennington.co" target="_blank" className="socialButtonLink">let's be friends on Instagram</a></button>
+         
             
         </div>
     )

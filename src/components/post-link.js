@@ -1,28 +1,77 @@
 import React from "react"
 import { Link } from "gatsby"
 import Img from "gatsby-image"
-import "./post-link.css"
 import styled from "styled-components"
 
+const Post = styled.div`
+    max-width: 500px;
+    width: 70vw;
+
+    margin-bottom: 30px;
+    transition-duration: .15s;
+
+
+    &:nth-child(even) {
+        margin-top: 50px;
+    }
+
+    // &:nth-child(odd) {
+    //     transform: translateX(50px);
+    // }
+
+    // &:nth-child(2n+3) {
+    //     transform: translateY(-60px);
+    // }
+
+    &:hover {
+        opacity: 70%;
+        transition-duration: .15s;
+    }
+
+    @media(max-width: 1200px) {
+        &:nth-child(even) {
+            margin-top: 0px;
+        }
+    }
+`
+
 const PostCard = styled.div`
-    background-color: snow;
-    padding: 8px;
-    margin-right: 40%;
-    margin-left: -5%;
-    margin-bottom: -2%;
-    z-index: -10;
+    
+
+`
+
+const PostTitle = styled.h2`
+    text-decoration: none;
+    color: #efefef;
+    font-size: 1.5em;
+    font-family: Lora;
+    font-weight: 100;
+    letter-spacing: 1px;
+    padding-left: 50px;
+
+    position: relative;
+    top: -80px;
+    z-index: 999;
+    
+    @media (max-width: 750px) {
+        font-size: 0.8em;
+        top: -45px;
+        padding-left: 20px;
+    }
 `
 
 const PostLink = ({ post }) => (
-    <div className='post'>
+    <Post>
         <Link to={post.frontmatter.path}>
             <PostCard>
-                <h2 className='postTitle'>{post.frontmatter.title}</h2>
-            </PostCard>
-                <Img fluid={post.frontmatter.coverPhoto.childImageSharp.fluid} />
+                
             
+                <Img fluid={post.frontmatter.coverPhoto.childImageSharp.fluid} />
+                <PostTitle>{post.frontmatter.title}</PostTitle>
+
+            </PostCard>
         </Link>
-    </div>
+    </Post>
 )
 
 export default PostLink

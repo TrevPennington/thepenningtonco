@@ -1,23 +1,8 @@
 import React from "react"
 import "./form.css"
 import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
 
 export default () => {
-
-  const data = useStaticQuery(graphql`
-  query {
-      titlePhoto: file(relativePath: { eq: "demo/amanda-frank-tvw_dg4UYzU-unsplash.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 1240) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-
-    }
-
-  `)
 
   const helloCopy1 = "Whether we're photographing an engagement, wedding, couple session, etc., Trevor and I always put our heart and soul into capturing photographs you will cherish forever."
   const helloCopy2 = "One of Trevor and I's favorite part about our business is creating relationships with our couples, not just being your photographers, but your friends! We strive to make our couples feel appreciated and comfortable. We understand the trust you put in your photographers hands to capture the sweet moments that go by way too fast."

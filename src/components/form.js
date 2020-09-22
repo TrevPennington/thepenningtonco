@@ -9,6 +9,11 @@ export default () => {
   const helloCopy3 = "Couples who are open for making your photo session an adventure, let's hang out! When photographing we love to capture unique, fun, silly, raw, and romantic moments. Our goal is to reflect the couple's personality and love through simple photographs."
   const helloCopy4 = "If you love our work, let's grab some coffee and get to know each other!"
 
+  function showSuccess() {
+    console.log("form submitted");
+    alert("Thank you for contacting us! We will be in touch soon :)");
+  }
+
     return (
         <div className='formWrapper'>
 
@@ -26,7 +31,7 @@ export default () => {
   
 
           {/* TODO : add a success page, like Squarepatch */}
-          <form name='inquiry' method='POST' className='contactForm' data-netlify="true" data-netlify-honeypot="bot-field" >
+          <form name='inquiry' method='POST' className='contactForm' data-netlify="true" data-netlify-honeypot="bot-field" onSubmit={showSuccess} >
                   <input type="hidden" name="bot-field" />
                   <input type="hidden" name="form-name" value="inquiry" />
                   

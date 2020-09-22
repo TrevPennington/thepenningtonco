@@ -129,6 +129,7 @@ input:focus, textarea:focus {
     font-size: .55em;
     letter-spacing: 1px;
     padding-left: 30px;
+    min-height: 1.5rem;
 }
 
 #moreAbout {

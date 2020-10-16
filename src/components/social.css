@@ -2,7 +2,7 @@
     margin-top: 70px;
     display: flex;
     flex-direction: column;
-    background-color: #f6f6f4;
+    
     padding-bottom: 90px;
     padding-top: 180px;
     margin-bottom: -120px;
@@ -42,6 +42,7 @@
     padding-left: 15px;
     border: 1px solid #333;
     background-color: transparent;
+    transition-duration: var(--button-duration);
 }
 
 .socialButtonLink {
@@ -52,6 +53,7 @@
     background-color: #333;
     color: white;
     cursor: pointer;
+    transition-duration: var(--button-duration);
 }
 
 .socialButton:hover > * {

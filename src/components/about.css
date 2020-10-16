@@ -1,6 +1,19 @@
 .aboutWrapper {
     width: 100%;
     margin-top: 120px;
+   
+}
+
+.aboutWrapper::before {
+    content: '';
+    display: block;
+    width: 1100px;
+    height: 700px; /*changable*/
+    margin: auto;
+    margin-bottom: -680px; /*changable*/
+    margin-top: -40px;
+    margin-right: 0px;
+    background-color: #f6f6f4;
 }
 
 .about {
@@ -12,21 +25,21 @@
 }
 
 .aboutPhoto {
-    width: 350px;
+    width: 1100px;
     margin: auto;
-    margin-left: 200px;
+    margin-left: 0px;
 }   
 
 .aboutText {
     align-self: flex-start;
     margin-top: 6vw;
-    margin-right: 100px;
+    margin-right: 5vw;
     text-align: center;
     width: 50%;
 }
 
 .aboutBody {
-    width: 70%;
+    width: 30vw;
     margin: auto;
     margin-bottom: 30px;
     letter-spacing: .8px;
@@ -36,9 +49,41 @@
     
 }
 
-@media (max-width: 939px) {
+
+
+.aboutTitle {
+    margin-bottom: 2px;
+}
+
+
+
+.usLink {
+    padding: 8px;
+    padding-right: 15px;
+    padding-left: 15px;
+    border: 1px solid #333;
+    background-color: transparent;
+    transition-duration: var(--button-duration);
+}
+
+.usLink:hover {
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    transition-duration: var(--button-duration);
+}
+
+.usLink:focus {
+    outline: none;
+}
+
+@media (max-width: 1150px) {
     .aboutWrapper {
         margin-top: 0px;
+    }
+
+    .aboutWrapper::before {
+        display: none;
     }
 
     .about {
@@ -57,7 +102,7 @@
         width: 100%;
     }
     .aboutPhoto {
-        width: 250px;
+        width: 80%;
         align-self: center;
         margin-left: 0px;
         margin: auto;
@@ -67,26 +112,8 @@
 
 }
 
-.aboutTitle {
-    margin-bottom: 2px;
-}
-
-
-
-.usLink {
-    padding: 8px;
-    padding-right: 15px;
-    padding-left: 15px;
-    border: 1px solid #333;
-    background-color: transparent;
-}
-
-.usLink:hover {
-    background-color: #333;
-    color: white;
-    cursor: pointer;
-}
-
-.usLink:focus {
-    outline: none;
+@media(max-width: 800px) {
+    .aboutWrapper {
+        margin-top: -100px;
+    }
 }

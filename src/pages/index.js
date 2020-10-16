@@ -23,10 +23,10 @@ export default IndexPage
 
 export const data = graphql`
 query {
-  hero: file(relativePath: { eq: "home/C92A9911.jpg" }) {
+  hero: file(relativePath: { eq: "inquire/smokies.jpg" }) {
     childImageSharp {
       fluid(
-        maxWidth: 1000
+        maxWidth: 1800
         quality: 100
       
         ) {

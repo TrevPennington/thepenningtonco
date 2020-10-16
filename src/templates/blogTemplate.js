@@ -10,7 +10,7 @@ const Container = styled.div`
 const Title = styled.h1`
     text-align: center;
     margin: auto;
-    margin-top: -120px;
+    margin-top: 0px;
     line-height: 2.5rem;
     color: #333;
     font-size: 1.7em;
@@ -18,7 +18,7 @@ const Title = styled.h1`
     font-weight: 600;
     @media(max-width: 840px){
         font-size: 1rem;
-        margin-top: -90px;
+        margin-top: 0px;
     }
 `
 

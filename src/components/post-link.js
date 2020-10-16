@@ -10,18 +10,9 @@ const Post = styled.div`
     margin-bottom: 30px;
     transition-duration: .15s;
 
-
     &:nth-child(even) {
         margin-top: 50px;
     }
-
-    // &:nth-child(odd) {
-    //     transform: translateX(50px);
-    // }
-
-    // &:nth-child(2n+3) {
-    //     transform: translateY(-60px);
-    // }
 
     &:hover {
         opacity: 70%;
@@ -64,8 +55,6 @@ const PostLink = ({ post }) => (
     <Post>
         <Link to={post.frontmatter.path}>
             <PostCard>
-                
-            
                 <Img fluid={post.frontmatter.coverPhoto.childImageSharp.fluid} />
                 <PostTitle>{post.frontmatter.title}</PostTitle>
 

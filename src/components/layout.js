@@ -97,7 +97,7 @@ function Layout(props) {
 
           <div className="burgerOpenMenuOptions">
             <Link to="/"><h2>HOME</h2></Link>
-            <Link to="/recent"><h2>RECENT</h2></Link>
+            <Link to="/recent"><h2>OUR WORK</h2></Link>
             <Link to="/about"><h2>MEET US</h2></Link>
             <Link to="/inquire"><h2>INQUIRE</h2></Link>
           </div>
@@ -123,7 +123,7 @@ function Layout(props) {
         </Link>
 
         <Link to="/recent" className='linkBox'>
-          <h2 className='navLink'>Recent</h2>
+          <h2 className='navLink'>Our work</h2>
         </Link>
 
         <h1 className='navLogo'>
@@ -154,7 +154,7 @@ function Layout(props) {
 
     </header>
     )
-  } else if (location === `recent` || location === `about`) { //================================================== DARK (not home)
+  } else if (location === `recent`) { //================================================== DARK (not home)
     menu = (
       <div className = 'navWrapper'>
       <nav className='navBar'>
@@ -164,7 +164,7 @@ function Layout(props) {
             </Link>
 
           <Link to="/recent" className='linkBox'>
-            <h2 className='navLink dark'>Recent</h2>
+            <h2 className='navLink dark'>Our work</h2>
           </Link>
 
         <h1 className='navLogo'>
@@ -194,7 +194,7 @@ function Layout(props) {
 
       <Img
         fluid={image}
-        className='minorHero'
+        className='minorHero recentHero'
       />
 
     </header>
@@ -209,7 +209,7 @@ function Layout(props) {
             </Link>
 
           <Link to="/recent" className='linkBox'>
-            <h2 className='navLink'>Recent</h2>
+            <h2 className='navLink'>Our work</h2>
           </Link>
 
         <h1 className='navLogo'>
@@ -238,6 +238,7 @@ function Layout(props) {
 
       <Img
         fluid={image}
+        
         className='minorHero'
       />
 

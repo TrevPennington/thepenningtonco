@@ -1,3 +1,8 @@
+:root {
+  --button-duration: .25s;
+}
+
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;

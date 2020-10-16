@@ -3,7 +3,10 @@
     position: relative;
     width: 100%;
     margin: auto;
+    overflow-x: hidden;
 }
+
+
 
 .heroImage {
     position: absolute;
@@ -13,10 +16,22 @@
     margin: auto;
 }
 
+@media(max-width: 800px) {
+    .heroImage {
+       height: 80vh;
+       width: 130%;
+       right: 100px;
+    }
+}
+
 .minorHero {
     position: absolute;
     top: 0;
-    height: 40vh;
+    height: 60vh;
+}
+
+.recentHero {
+    height: 200px;
 }
 
 .navWrapper {

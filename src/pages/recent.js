@@ -6,7 +6,7 @@ import PostLink from "../components/post-link"
 import styled from 'styled-components'
 
 const PostWrapper = styled.div`
-  margin-top: 150px;
+  
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
@@ -61,8 +61,7 @@ const Recent = ({
       location={`recent`}
       image={heroImage} //TODO: make this WORK
     >
-      <LineBreak />
-      <Title>Recent stories</Title>
+
       <PostWrapper>{Posts}</PostWrapper>
     </Layout>
 )

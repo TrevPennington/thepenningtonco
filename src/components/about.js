@@ -10,9 +10,9 @@ export default () => {
 
   const data = useStaticQuery(graphql`
    query {
-       usPhoto: file(relativePath: { eq: "about/kitters.jpg" }) {
+       usPhoto: file(relativePath: { eq: "inquire/trevandshelby.jpg" }) {
          childImageSharp {
-           fluid(maxWidth: 300, maxHeight: 500, quality: 100) {
+           fluid(maxWidth: 600, maxHeight: 375, quality: 100) {
              ...GatsbyImageSharpFluid
            }
          }
@@ -22,8 +22,11 @@ export default () => {
 
    `)
 
-   const aboutBodyText = "Hello there, we are Trevor and Shelby. We photograph couples at weddings, on mountain-tops, and in the city streets. Our vibe is super chill and we love being friends with the people we photograph."
-  return (
+    const aboutBodyText = "Hey, We're Trevor and Shelby!"
+    const aboutBodyText1 = "a husband and wife photographer team based out of Raleigh, NC."
+    const aboutBodyText2 = "On our day off you can find us drinking smoothies, thrifting around town, shopping at REI or hiking our favorite trails."
+  
+    return (
     <div className='aboutWrapper'>
       <div className="about">
        
@@ -35,7 +38,7 @@ export default () => {
    
         <div className='aboutText'>
           <img src={logo} className='aboutTitle' width='90' height='90' alt='T+S' />
-          <p className='aboutBody'>{aboutBodyText}</p>
+          <p className='aboutBody'>{aboutBodyText}<br/>{aboutBodyText1}<br/>{aboutBodyText2}</p>
           <Link to='/about'><button className='usLink button'>more about us</button></Link>
         </div>
         

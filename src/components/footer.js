@@ -38,12 +38,12 @@ const Footer = () => (
     <div className='footerWrapper'>
         <div className='contentWrapper'>
             <div className='social'>
-                <a href="#"><Insta size="27px" /></a>
-                <a href="#"><Faceboo size="18px" /></a>
-                <a href="#"><Pinterest size="25px" /></a>
+                <a href="https://www.instagram.com/thepennington.co/" target="_blank"><Insta size="27px" /></a>
+                <a href="https://www.facebook.com/thepennington.co/" target="_blank"><Faceboo size="18px" /></a>
+                <a href="https://www.pinterest.com/thepenningtonco/" target="_blank"><Pinterest size="25px" /></a>
             </div>
             <h1 className='footerCreator'>
-                <a href="https://www.trevorpennington.com/" style={{color: `#333`}}>created by Trevor Pennington</a>
+                <a href="https://www.trevorpennington.com/" target="_blank" style={{color: `#333`}}>created by Trevor Pennington</a>
             </h1>
         </div>
     </div>

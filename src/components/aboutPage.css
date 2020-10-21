@@ -38,7 +38,7 @@
     
 }
 
-.aboutContentWrapper::after {
+/* .aboutContentWrapper::after {
     content: "";
     position: absolute;
     left: 0;
@@ -50,7 +50,7 @@
     background-color: #f6f6f4;
     z-index: -5;
     
-}
+} */
 
 .headTitle {
     width: 300px;

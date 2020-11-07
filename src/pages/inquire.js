@@ -5,7 +5,7 @@ import Form from "../components/form"
 
 export const data = graphql`
 query {
-  hero: file(relativePath: { eq: "inquire/celebrate.jpg" }) {
+  hero: file(relativePath: { eq: "inquire/chand.jpg" }) {
     childImageSharp {
       fluid(
         maxWidth: 1800
@@ -18,7 +18,6 @@ query {
   }
 
 }`
-
 
 export default ({ data }) => {
     return (

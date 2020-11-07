@@ -36,6 +36,7 @@ const PostTitle = styled.h2`
     color: #efefef;
     font-size: 1.5em;
     font-family: Lora;
+    font-style: italic;
     font-weight: 100;
     letter-spacing: 1px;
     padding-left: 50px;

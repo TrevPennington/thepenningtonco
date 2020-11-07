@@ -16,6 +16,7 @@ const Title = styled.h1`
     font-size: 1.7em;
     font-family: sans-serif;
     font-weight: 600;
+    font-style: italic;
     @media(max-width: 840px){
         font-size: 1rem;
         margin-top: 0px;
@@ -55,13 +56,24 @@ const Content = styled.div`
     }
 `
 
-
-
 export default function Template({
     data, //this prop will be injected by the GraphQL query below.
 }) {
     const { markdownRemark } = data //data.markdownRemark holds post data
     const { frontmatter, html } = markdownRemark
+
+    function contentToDisplay(){
+        if (frontmatter.html == null) {
+            return (
+                <Content dangerouslySetInnerHTML={{ __html: html }} />
+            )
+        } else {
+            return (
+                <Content dangerouslySetInnerHTML={{ __html: frontmatter.html }} />
+            )
+        }
+    }
+
     return (
         <Layout
             location='recent'
@@ -72,7 +84,7 @@ export default function Template({
                     <Title>{frontmatter.title}</Title>
                     <Date>{frontmatter.date}</Date>
                     <Description>{frontmatter.description}</Description>
-                    <Content dangerouslySetInnerHTML={{ __html: html }} />
+                    {contentToDisplay()}
                 </div>
             </Container>
         </Layout>

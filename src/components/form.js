@@ -19,7 +19,6 @@ export default () => {
       <div>
         <div className='formWrapper'>
 
-
           <div className='contactCta bordered'>
 
               <h1 id='ctaTitle'>LET'S TALK!</h1>
@@ -40,9 +39,6 @@ export default () => {
               </div>
           </div>
 
-
-  
-
           {/* TODO : add a success page, like Squarepatch */}
           <form name='inquiry' method='POST' className='contactForm' data-netlify="true" data-netlify-honeypot="bot-field" onSubmit={confirmationAlert}>
                   <input type="hidden" name="bot-field" />
@@ -50,28 +46,28 @@ export default () => {
                   
                   <h4 className='formTitle'>SAY HELLO</h4>
     
-                  <input id='f1' className="formField" type='text' name='name' required 
+                  <input id='f1' className="formField" type='text' name='name' required //name
                     placeholder="full name*"/>
 
-                  <input id='f2' className="formField" type='text' name="significant others' name (if applicable)" 
+                  <input id='f2' className="formField" type='text' name="significant others' name (if applicable)" //sig other
                     placeholder="significant others' name (if applicable)" />
+
+                  <input id='f6' className="formField" type='email' name='address' required //email
+                    placeholder="email address*"/>
                   
-                  <input id='f3' className="formField" type='text' name='event type' required
+                  <input id='f3' className="formField" type='text' name='event type' required //type of event
                     placeholder="what would you like photographed?*"/>
-                  
-                  <input id='f3' className="formField" type='text' name='location' required
-                    placeholder="location/venue*"/>
 
                   <input id='f4' className="formField" type='text' name='date' required placeholder='date*' />
+                  
+                  <input id='f3' className="formField" type='text' name='location' required //location
+                    placeholder="location/venue*"/>
 
-                  <textarea id='f5' className="formField" id='moreAbout' name='more about' required
-                    placeholder="tell us more about you!*"></textarea>
-
-                  <input id='f6' className="formField" type='email' name='address' required 
-                    placeholder="email address*"/>
-
-                  <input id='f7' className="formField" type='text' name='how did you hear?'
+                  <input id='f7' className="formField" type='text' name='how did you hear?' //how did you hear
                     placeholder="how did you hear about us?!"/>
+
+                  <textarea id='f5' className="formField" id='moreAbout' name='more about' required //tell us more
+                    placeholder="tell us more about you!*"></textarea>
 
                   <button id='f8' className="formField" type='submit' className='submitForm'>
                     submit!</button>

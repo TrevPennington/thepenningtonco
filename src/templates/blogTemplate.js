@@ -62,18 +62,6 @@ export default function Template({
     const { markdownRemark } = data //data.markdownRemark holds post data
     const { frontmatter, html } = markdownRemark
 
-    function contentToDisplay(){
-        if (frontmatter.html == null) {
-            return (
-                <Content dangerouslySetInnerHTML={{ __html: html }} />
-            )
-        } else {
-            return (
-                <Content dangerouslySetInnerHTML={{ __html: frontmatter.html }} />
-            )
-        }
-    }
-
     return (
         <Layout
             location='recent'
@@ -84,7 +72,7 @@ export default function Template({
                     <Title>{frontmatter.title}</Title>
                     <Date>{frontmatter.date}</Date>
                     <Description>{frontmatter.description}</Description>
-                    {contentToDisplay()}
+                    <Content dangerouslySetInnerHTML={{ __html: html }} />
                 </div>
             </Container>
         </Layout>

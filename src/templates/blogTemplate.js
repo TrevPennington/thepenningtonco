@@ -65,6 +65,7 @@ export default function Template({
         <Layout
             location='recent'
             image='hi'
+            loading={true}
             >
             <Container>
                     <Title>{frontmatter.title}</Title>

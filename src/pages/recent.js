@@ -13,31 +13,6 @@ const PostWrapper = styled.div`
   margin: auto;
 `
 
-const Title = styled.h1`
-  margin: auto;
-  text-align: center;
-  margin-top: -150px;
-  margin-bottom: 100px;
-  color: #888;
-  
-  &::before {
-    content: '';
-    display: block;
-    width: 90%;
-    height: 500px;
-    margin: auto;
-    margin-top: 10px;
-    margin-bottom: -400px;
-    background-color: #f6f6f4;
-  }
-
-    @media (max-width: 400px) {
-      margin-top: -60px;
-      margin-bottom: 50px;
-    }
-  
-`
-
 const Recent = ({
   data: {
     allMarkdownRemark: { edges },

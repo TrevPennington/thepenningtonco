@@ -26,11 +26,11 @@ const PostTitle = styled.h2`
     font-family: Lora;
     font-weight: 100;
     letter-spacing: 2.5px;
-    padding-left: 50px;
+    padding-left: 30px;
     text-transform: uppercase;
 
     position: relative;
-    top: -80px;
+    top: -60px;
     z-index: 999;
     
     @media (max-width: 750px) {

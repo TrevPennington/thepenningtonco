@@ -248,7 +248,10 @@ function Layout(props) {
         <main>{children}</main>
       </div>
       <div style={{position: 'relative', bottom: `-20px`, width: `100%`}}>
-        <Footer />
+        { !props.loading &&
+          <Footer />
+        }
+        
       </div>
     </>
   )

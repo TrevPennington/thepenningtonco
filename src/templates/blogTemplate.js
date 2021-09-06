@@ -2,9 +2,11 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import styled from "styled-components"
+import InnerHTML from 'dangerously-set-html-content'
 
 const Container = styled.div`
     margin: auto;
+
 `
 
 const Title = styled.h1`
@@ -16,7 +18,6 @@ const Title = styled.h1`
     font-size: 1.7em;
     font-family: sans-serif;
     font-weight: 600;
-    font-style: italic;
     @media(max-width: 840px){
         font-size: 1rem;
         margin-top: 0px;
@@ -46,12 +47,10 @@ const Description = styled.h2`
 `
 
 const Content = styled.div`
-    width: 50vw;
+    width: 60vw;
     margin: auto;
-    line-height: 4.7px;
 
-    @media(max-width: 840px){
-        line-height: 2.4px;
+    @media(max-width: 1000px){
         width: 80vw;
     }
 `
@@ -64,16 +63,16 @@ export default function Template({
 
     return (
         <Layout
-            location='recent'
+            location='about'
             image='hi'
             >
             <Container>
-                <div className='blog-post'>
                     <Title>{frontmatter.title}</Title>
                     <Date>{frontmatter.date}</Date>
                     <Description>{frontmatter.description}</Description>
-                    <Content dangerouslySetInnerHTML={{ __html: html }} />
-                </div>
+                    <Content>
+                    <InnerHTML html={html} />
+                    </Content>
             </Container>
         </Layout>
     )
@@ -85,7 +84,6 @@ export const PageQuery = graphql`
                     html
                   frontmatter {
                     description
-                    photos
                     title
                   }
                 }

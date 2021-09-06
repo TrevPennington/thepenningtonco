@@ -63,7 +63,7 @@ module.exports = {
         background_color: `white`,
         theme_color: `white`,
         display: `minimal-ui`,
-        
+        icon: `src/tpcFavicon.png`
       },
     },
     {

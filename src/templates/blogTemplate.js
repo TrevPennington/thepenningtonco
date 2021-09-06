@@ -63,7 +63,7 @@ export default function Template({
 
     return (
         <Layout
-            location='about'
+            location='recent'
             image='hi'
             >
             <Container>
@@ -84,6 +84,7 @@ export const PageQuery = graphql`
                     html
                   frontmatter {
                     description
+                    
                     title
                   }
                 }

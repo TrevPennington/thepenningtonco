@@ -6,16 +6,11 @@ import PostLink from "../components/post-link"
 import styled from 'styled-components'
 
 const PostWrapper = styled.div`
-  
   display: flex;
+  height: 100%;
   flex-flow: row wrap;
-  justify-content: space-around;
-  width: 80%;
+  justify-content: center;
   margin: auto;
-`
-
-const LineBreak = styled.div`
-  
 `
 
 const Title = styled.h1`
@@ -61,13 +56,14 @@ const Recent = ({
       location={`recent`}
       image={heroImage} //TODO: make this WORK
     >
-
       <PostWrapper>{Posts}</PostWrapper>
     </Layout>
 )
 }
 
 export default Recent
+
+
 
 export const pageQuery = graphql`
   query {
@@ -82,7 +78,7 @@ export const pageQuery = graphql`
             title
             coverPhoto {
               childImageSharp {
-                  fluid(maxWidth: 900) {
+                  fluid(maxWidth: 900, maxHeight: 900) {
                       src
                       ...GatsbyImageSharpFluid
                   }

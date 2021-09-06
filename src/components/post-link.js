@@ -4,42 +4,30 @@ import Img from "gatsby-image"
 import styled from "styled-components"
 
 const Post = styled.div`
-    max-width: 500px;
-    width: 70vw;
-
-    margin-bottom: 30px;
+    width: 500px;
+    height: 500px;
+    margin: 25px;
     transition-duration: .15s;
-
-    &:nth-child(even) {
-        margin-top: 50px;
-    }
-
     &:hover {
         opacity: 70%;
         transition-duration: .15s;
     }
-
-    @media(max-width: 1200px) {
-        &:nth-child(even) {
-            margin-top: 0px;
-        }
-    }
 `
 
 const PostCard = styled.div`
-    
+ 
 
 `
 
 const PostTitle = styled.h2`
     text-decoration: none;
     color: #efefef;
-    font-size: 1.5em;
+    font-size: 1em;
     font-family: Lora;
-    font-style: italic;
     font-weight: 100;
-    letter-spacing: 1px;
+    letter-spacing: 2.5px;
     padding-left: 50px;
+    text-transform: uppercase;
 
     position: relative;
     top: -80px;

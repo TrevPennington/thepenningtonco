@@ -1,6 +1,6 @@
 ---
 path: "/recent/wrightsville-beach"
-date: "2021-07-04"
+date: "2021-12-12"
 title: "Wrightsville Beach engagements"
 description: "Engagement session in Wilmington, NC"
 link: this will be a link

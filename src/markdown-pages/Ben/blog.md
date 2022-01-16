@@ -1,6 +1,6 @@
 ---
 path: "/recent/asheville-elopement"
-date: "2020-04-01"
+date: "2020-11-03"
 title: "Asheville Elopement"
 description: "Overcast + mountaintop elopement in Asheville, NC"
 link: this will be a link

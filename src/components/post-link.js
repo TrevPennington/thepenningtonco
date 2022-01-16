@@ -40,11 +40,15 @@ const PostTitle = styled.h2`
     }
 `
 
+const PostImg = styled(Img)`
+background-position: center;
+`
+
 const PostLink = ({ post }) => (
     <Post>
         <Link to={post.frontmatter.path}>
             <PostCard>
-                <Img fluid={post.frontmatter.coverPhoto.childImageSharp.fluid} />
+                <PostImg fluid={post.frontmatter.coverPhoto.childImageSharp.fluid} />
                 <PostTitle>{post.frontmatter.title}</PostTitle>
 
             </PostCard>

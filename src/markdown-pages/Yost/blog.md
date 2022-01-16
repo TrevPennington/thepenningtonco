@@ -1,6 +1,6 @@
 ---
 path: "/recent/downtown-wedding-day"
-date: "2018-10-04"
+date: "2020-10-05"
 title: "Downtown wedding day"
 description: "Downtown wedding day in Raleigh, NC"
 link: this will be a link

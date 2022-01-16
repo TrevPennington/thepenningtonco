@@ -14,10 +14,10 @@ const Title = styled.h1`
     margin: auto;
     margin-top: 0px;
     line-height: 2.5rem;
-    color: #333;
+    color: #999;
     font-size: 1.7em;
     font-family: sans-serif;
-    font-weight: 600;
+    font-weight: 500;
     @media(max-width: 840px){
         font-size: 1rem;
         margin-top: 0px;
@@ -32,7 +32,7 @@ const Date = styled.h3`
 `
 
 const Description = styled.h2`
-    color: #555;
+    color: #999;
     text-align: center;
     margin: auto;
     line-height: 2.5rem;

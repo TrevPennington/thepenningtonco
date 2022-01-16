@@ -1,6 +1,6 @@
 ---
 path: "/recent/backyard-wedding"
-date: "2020-11-04"
+date: "2021-12-02"
 title: "Backyard micro wedding"
 description: "micro wedding in Chapel Hill, NC"
 link: this will be a link

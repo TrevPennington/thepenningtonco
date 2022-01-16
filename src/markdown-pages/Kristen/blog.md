@@ -1,6 +1,6 @@
 ---
 path: "/recent/mountaintop-engagements"
-date: "2020-11-04"
+date: "2020-10-04"
 title: "Mountaintop engagements"
 description: "Engagement session in the Blue Ridge mountains"
 link: this will be a link

@@ -12,7 +12,6 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
-          
           {
             resolve: `gatsby-remark-images`,
             options: {
@@ -27,7 +26,7 @@ module.exports = {
             options: {
               styleAttributes: [`margin-bottom`],
             },
-          }
+          },
         ],
       },
     },
@@ -48,11 +47,9 @@ module.exports = {
         path: `${__dirname}/src/markdown-pages`,
       },
     },
-    
 
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
-
 
     {
       resolve: `gatsby-plugin-manifest`,
@@ -63,7 +60,7 @@ module.exports = {
         background_color: `white`,
         theme_color: `white`,
         display: `minimal-ui`,
-        icon: `src/tpcFavicon.png`
+        icon: `src/tpcFavicon.png`,
       },
     },
     {
@@ -95,36 +92,5 @@ module.exports = {
         cookieDomain: "example.com",
       },
     },
-    {
-      resolve: `gatsby-plugin-favicon`,
-      options: {
-        logo: "./src/tpcFavicon.png",
-  
-        // WebApp Manifest Configuration
-        appName: null, // Inferred with your package.json
-        appDescription: null,
-        developerName: null,
-        developerURL: null,
-        dir: 'auto',
-        lang: 'en-US',
-        background: '#fff',
-        theme_color: '#fff',
-        display: 'standalone',
-        orientation: 'any',
-        start_url: '/?homescreen=1',
-        version: '1.0',
-  
-        icons: {
-          android: true,
-          appleIcon: true,
-          appleStartup: true,
-          coast: false,
-          favicons: true,
-          firefox: true,
-          yandex: false,
-          windows: false
-        }
-      }
-    }
   ],
 }

@@ -11,6 +11,9 @@ input, select { font-size: 100%; } */
 .formWrapper {
     display: flex;
     align-content: center;
+    max-width: 1500px;
+    margin: auto;
+    margin-top: 3rem;
 }
 
 .contactCta {
@@ -90,7 +93,7 @@ input, select { font-size: 100%; } */
 .contactForm > * {
     width: 90%;
     margin-bottom: 25px;
-    text-align: center;
+    /* text-align: center; */
     border: none;
 
     background-color: transparent;
@@ -135,16 +138,9 @@ input:focus, textarea:focus {
     padding-right: 15px;
     background-color: white;
 }
-
-/* #f4 {
-    text-align: center;
-    text-transform: uppercase;
-    font-family: sans-serif;
-    font-size: .55em;
-    letter-spacing: 1px;
-    padding-left: 30px;
-    min-height: 1.5rem;
-} */
+.formField {
+    padding: 14px;
+}
 
 #moreAbout {
     padding-bottom: 100px;
@@ -230,7 +226,7 @@ select:-webkit-autofill:focus {
     }
 
     .contactForm > * {
-        font-size: 0.6em;
+        font-size: 0.8em;
     }
 
     .formField {

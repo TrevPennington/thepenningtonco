@@ -2,22 +2,19 @@ import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
 import Img from "gatsby-image"
 import PropTypes from "prop-types"
-import Hero from "./hero"
 import Footer from "./footer"
 import "./layout.css"
 import "./header.css"
 import "./burgerHeader.css"
 import mainlogo from "../images/SVG/trevor+shelby light.svg"
 import secondlogo from "../images/SVG/trevor+shelby.svg"
-import styled from "styled-components"
 import { MenuAltRight } from "@styled-icons/boxicons-regular/MenuAltRight"
 import { Close } from "@styled-icons/remix-line/Close"
 
 function Layout(props) {
-
   const [burger, setBurger] = useState(false)
   const [burgerOpen, setOpen] = useState(false)
-  
+
   const { location, children, image } = props
 
   let header
@@ -27,10 +24,10 @@ function Layout(props) {
   useEffect(() => {
     // Update the document title using the browser API
     checkBurger()
-    window.addEventListener('resize', checkBurger)
+    window.addEventListener("resize", checkBurger)
 
     console.log(burgerOpen)
-  }, []);
+  }, [])
 
   function checkBurger() {
     if (window.innerWidth < 700) {
@@ -39,227 +36,238 @@ function Layout(props) {
       setBurger(false)
     }
   }
-  
+
   function toggleBurger() {
     if (!burgerOpen) {
       setOpen(true)
       console.log(burgerOpen)
-   
     } else {
       setOpen(false)
       console.log(burgerOpen)
-     
     }
   }
 
-  function renderMenu(dark) { //take in a color as props
+  function renderMenu(dark) {
+    //take in a color as props
     if (burger && !burgerOpen) {
       let logoColor
       let closeIconColor
       if (dark) {
         closeIconColor = "black"
         logoColor = (
-          <img src={secondlogo} alt='The Pennington Co.' width='150' height='150' style={{color:`black`}} />
+          <img
+            src={secondlogo}
+            alt="The Pennington Co."
+            width="150"
+            height="150"
+            style={{ color: `black` }}
+          />
         )
       } else {
         closeIconColor = "#efefef"
         logoColor = (
-          <img src={mainlogo} alt='The Pennington Co.' width='150' height='150' style={{color:`#efefef`}} />
+          <img
+            src={mainlogo}
+            alt="The Pennington Co."
+            width="150"
+            height="150"
+            style={{ color: `#efefef` }}
+          />
         )
       }
       burgerMenu = (
-        <div className = 'burgerNavWrapper'>
-          
-          <h1 className='burgerNavLogo'>
-            <Link to="/">
-              {logoColor}
-            </Link>
+        <div className="burgerNavWrapper">
+          <h1 className="burgerNavLogo">
+            <Link to="/">{logoColor}</Link>
           </h1>
 
-          <MenuAltRight className="burgerIcon" onClick={toggleBurger} style={{color:closeIconColor}} />
-
+          <MenuAltRight
+            className="burgerIcon"
+            onClick={toggleBurger}
+            style={{ color: closeIconColor }}
+          />
         </div>
       )
-      return (burgerMenu)
+      return burgerMenu
     } else if (burger && burgerOpen) {
-
       burgerMenu = (
-
-        <div className = 'burgerOpenNavWrapper'>
-          
-
+        <div className="burgerOpenNavWrapper">
           <div className="burgerOpenMenuOptions">
-            <Link to="/"><h2>HOME</h2></Link>
-            <Link to="/recent"><h2>OUR WORK</h2></Link>
-            <Link to="/about"><h2>MEET US</h2></Link>
-            <Link to="/inquire"><h2>INQUIRE</h2></Link>
+            <Link to="/">
+              <h2>HOME</h2>
+            </Link>
+            <Link to="/recent">
+              <h2>OUR WORK</h2>
+            </Link>
+            <Link to="/about">
+              <h2>MEET US</h2>
+            </Link>
+            <Link to="/inquire">
+              <h2>INQUIRE</h2>
+            </Link>
           </div>
 
           <Close className="closeIcon" onClick={toggleBurger} />
-
         </div>
-
       )
-      return (burgerMenu)
+      return burgerMenu
     } else if (!burger) {
-      return (menu)
+      return menu
     }
   }
 
-  if (location === `home`) { // ============================ HOME
+  if (location === `home`) {
+    // ============================ HOME
     menu = (
-      <div className = 'navWrapper'>
-      <nav className='navBar'>
-
-        <Link to="/" className='linkBox'>
-          <h2 className='navLink'>Home</h2>
-        </Link>
-
-        <Link to="/recent" className='linkBox'>
-          <h2 className='navLink'>Our work</h2>
-        </Link>
-
-        <h1 className='navLogo'>
-          <Link to="/">
-            <img src={mainlogo} alt='The Pennington Co.' width='150' height='150' className='mainLogo' />
+      <div className="navWrapper">
+        <nav className="navBar">
+          <Link to="/" className="linkBox">
+            <h2 className="navLink">Home</h2>
           </Link>
-        </h1>
 
-        <Link to="/about" className='linkBox'>
-          <h2 className='navLink'>meet us</h2>
-        </Link>
+          <Link to="/recent" className="linkBox">
+            <h2 className="navLink">Our work</h2>
+          </Link>
 
-        <Link to="/inquire" className='linkBox'>
-          <h2 className='navLink'>Inquire</h2>
-        </Link>
-      </nav>
-      </div>
-    )
-    header = (
-      <header className = "homeHeaderWrapper" >
-          {
-            renderMenu(false)
-          }
-        <Img
-          fluid={image}
-          className='heroImage'
-        />
-
-    </header>
-    )
-  } else if (location === `recent`) { //================================================== DARK (not home)
-    menu = (
-      <div className = 'navWrapper'>
-      <nav className='navBar'>
-
-          <Link to="/" className='linkBox'>
-              <h2 className='navLink dark'>Home</h2>
+          <h1 className="navLogo">
+            <Link to="/">
+              <img
+                src={mainlogo}
+                alt="The Pennington Co."
+                width="150"
+                height="150"
+                className="mainLogo"
+              />
             </Link>
+          </h1>
 
-          <Link to="/recent" className='linkBox'>
-            <h2 className='navLink dark'>Our work</h2>
+          <Link to="/about" className="linkBox">
+            <h2 className="navLink">meet us</h2>
           </Link>
 
-        <h1 className='navLogo'>
-          <Link to="/">
-            <img src={secondlogo} alt='The Pennington Co.' width='150' height='150' className='mainLogo'/>
-            
+          <Link to="/inquire" className="linkBox">
+            <h2 className="navLink">Inquire</h2>
           </Link>
-        </h1>
-
-        <Link to="/about" className='linkBox'>
-            <h2 className='navLink dark'>meet us</h2>
-        </Link>
-
-        <Link to="/inquire" className='linkBox'>
-            <h2 className='navLink dark'>Inquire</h2>
-        </Link>
-      </nav>
+        </nav>
       </div>
     )
-    
     header = (
-      <header className = "headerWrapper">
-
-          {
-            renderMenu(true)
-          }
-
-      <Img
-        fluid={image}
-        className='minorHero recentHero'
-      />
-
-    </header>
+      <header className="homeHeaderWrapper">
+        {renderMenu(false)}
+        <Img fluid={image} className="heroImage" />
+      </header>
     )
-  } else { //================================================================ LIGHT
+  } else if (location === `recent`) {
+    //================================================== DARK (not home)
     menu = (
-      <div className = 'navWrapper'>
-      <nav className='navBar'>
+      <div className="navWrapper">
+        <nav className="navBar">
+          <Link to="/" className="linkBox">
+            <h2 className="navLink dark">Home</h2>
+          </Link>
 
-            <Link to="/" className='linkBox'>
-              <h2 className='navLink'>Home</h2>
+          <Link to="/recent" className="linkBox">
+            <h2 className="navLink dark">Our work</h2>
+          </Link>
+
+          <h1 className="navLogo">
+            <Link to="/">
+              <img
+                src={secondlogo}
+                alt="The Pennington Co."
+                width="150"
+                height="150"
+                className="mainLogo"
+              />
             </Link>
+          </h1>
 
-          <Link to="/recent" className='linkBox'>
-            <h2 className='navLink'>Our work</h2>
+          <Link to="/about" className="linkBox">
+            <h2 className="navLink dark">meet us</h2>
           </Link>
 
-        <h1 className='navLogo'>
-          <Link to="/">
-            <img src={mainlogo} alt='The Pennington Co.' width='150' height='150' className='mainLogo'/>
+          <Link to="/inquire" className="linkBox">
+            <h2 className="navLink dark">Inquire</h2>
           </Link>
-        </h1>
+        </nav>
+      </div>
+    )
 
-        <Link to="/about" className='linkBox'>
-              <h2 className='navLink'>meet us</h2>
-        </Link>
+    header = (
+      <header className="headerWrapper">
+        {renderMenu(true)}
 
-        <Link to="/inquire" className='linkBox'>
-            <h2 className='navLink'>Inquire</h2>
-        </Link>
+        <Img fluid={image} className="minorHero recentHero" />
+      </header>
+    )
+  } else {
+    //================================================================ LIGHT
+    menu = (
+      <div className="navWrapper">
+        <nav className="navBar">
+          <Link to="/" className="linkBox">
+            <h2 className="navLink">Home</h2>
+          </Link>
 
-      </nav>
+          <Link to="/recent" className="linkBox">
+            <h2 className="navLink">Our work</h2>
+          </Link>
+
+          <h1 className="navLogo">
+            <Link to="/">
+              <img
+                src={mainlogo}
+                alt="The Pennington Co."
+                width="150"
+                height="150"
+                className="mainLogo"
+              />
+            </Link>
+          </h1>
+
+          <Link to="/about" className="linkBox">
+            <h2 className="navLink">meet us</h2>
+          </Link>
+
+          <Link to="/inquire" className="linkBox">
+            <h2 className="navLink">Inquire</h2>
+          </Link>
+        </nav>
       </div>
     )
     header = (
-      <header className = "headerWrapper">
+      <header className="headerWrapper">
+        {renderMenu(false)}
 
-          {
-            renderMenu(false)
-          }
-
-      <Img
-        fluid={image}
-        
-        className='minorHero'
-      />
-
-    </header>
+        <Img fluid={image} className="minorHero" />
+      </header>
     )
   }
 
   return (
-    <>
-      <div style={{marginBottom: `100px`}}>
-        <header siteTitle={`Trevor and Shelby Pennington`}>
-          {header}
-        </header>
+    <div
+      style={{
+        minHeight: `102vh`,
+        display: "flex",
+        flexDirection: "column",
+      }}
+    >
+      <div
+        style={{
+          marginBottom: `20rem`,
+          flex: 1,
+        }}
+      >
+        <header siteTitle={`Trevor and Shelby Pennington`}>{header}</header>
         <main>{children}</main>
       </div>
-      <div style={{position: 'relative', bottom: `-20px`, width: `100%`}}>
-        { !props.loading &&
-          <Footer />
-        }
-        
-      </div>
-    </>
+      <div>{!props.loading && <Footer />}</div>
+    </div>
   )
 }
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
 }
-
 
 export default Layout

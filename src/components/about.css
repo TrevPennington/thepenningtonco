@@ -1,7 +1,7 @@
 .aboutWrapper {
     width: 100%;
-    margin-top: 120px;
-   
+    max-width: 1800px;
+    margin: 6rem auto;
 }
 
 .aboutWrapper::before {
@@ -49,12 +49,9 @@
     
 }
 
-
-
 .aboutTitle {
     margin-bottom: 2px;
 }
-
 
 
 .usLink {
@@ -114,6 +111,6 @@
 
 @media(max-width: 800px) {
     .aboutWrapper {
-        margin-top: -100px;
+        margin-top: -200px;
     }
 }

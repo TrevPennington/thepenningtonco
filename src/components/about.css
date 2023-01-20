@@ -39,7 +39,7 @@
 }
 
 .aboutBody {
-    width: 30vw;
+    max-width: 350px;
     margin: auto;
     margin-bottom: 30px;
     letter-spacing: .8px;

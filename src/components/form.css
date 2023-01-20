@@ -62,6 +62,9 @@ input, select { font-size: 100%; } */
     font-size: .8em;
     z-index: 99;
 }
+.bucketListPlaces {
+    padding-bottom: 10px;
+}
 
 .bucketListMobileWrapper {
     display: none;

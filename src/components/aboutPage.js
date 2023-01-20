@@ -5,7 +5,7 @@ import Img from "gatsby-image"
 
 export default () => {
   const bio =
-    "The two of us live in Raleigh, North Carolina in our small & cozy home along with our cat, Kitters. Although we call North Carolina home, we love spending our free time exploring new cities and states whenever the opportunity presents itself! We both have been photographing for 5+ years, but officially created the Pennington Co. when we got married in 2017. We truly have a passion for photography and continue to be grateful to be able to work along side each other as husband and wife."
+    "The two of us live in Raleigh, North Carolina in our small & cozy home along with our cat, Kitters. Although we call North Carolina home, we love spending our free time exploring new cities and states whenever the opportunity presents itself! We both have been photographing for 7+ years, but officially created the Pennington Co. when we got married in 2017. We truly have a passion for photography and continue to be grateful to be able to work along side each other as husband and wife."
   const biotwo =
     "Our style is very laid back and easy going. We strive to make our photography a fun and positive experience! We look forward to capturing all of your special moments and hope to make your time with us a memorable adventure! If our style is what you are looking for and would like to get to know us more, head over to our inquire page and fill out our form. We would love to meet you!"
   const biothree = " - Shelby & Trevor Pennington"

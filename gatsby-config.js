@@ -11,7 +11,7 @@ module.exports = {
   plugins: [
     {
       // this must be loaded first in order to work
-      resolve: `gatsby-plugin-gtag`, // note this instead of gatsby-plugin-react-helmet
+      resolve: `gatsby-plugin-google-gtag`, // note this instead of gatsby-plugin-react-helmet
       options: {
         trackingId: process.env.G_TAG_TRACKING_ID,
         head: true, // note this is TRUE and not FALSE as listed in other examples above

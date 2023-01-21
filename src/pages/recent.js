@@ -11,6 +11,7 @@ const PostWrapper = styled.div`
   flex-flow: row wrap;
   justify-content: center;
   margin: auto;
+  max-width: 2000px;
 `
 
 const Recent = ({

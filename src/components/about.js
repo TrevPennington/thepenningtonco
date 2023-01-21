@@ -21,7 +21,16 @@ export default () => {
   const aboutBodyText1 =
     "a husband and wife photographer team based out of Raleigh, NC."
   const aboutBodyText2 =
-    "On our day off you can find us drinking smoothies, thrifting around town, shopping at REI or hiking our favorite trails."
+    "On our day off you can find us drinking coffee, antiquing around town, shopping at REI or hiking our favorite trails."
+
+  const aboutText = (
+    <p>
+      a husband and wife photographer team
+      <br />
+      based out of Raleigh, NC. On our day off you can find us drinking coffee,
+      antiquing around town, shopping at REI or hiking our favorite trails.
+    </p>
+  )
 
   return (
     <div className="aboutWrapper">
@@ -43,9 +52,7 @@ export default () => {
           <p className="aboutBody">
             {aboutBodyText}
             <br />
-            {aboutBodyText1}
-            <br />
-            {aboutBodyText2}
+            {aboutText}
           </p>
           <Link to="/about">
             <button className="usLink button">more about us</button>

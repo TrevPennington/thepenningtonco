@@ -58,6 +58,7 @@ module.exports = {
       gtagConfig: {
         anonymize_ip: true,
         cookie_expires: 0,
+        send_page_view: true,
       },
       pluginConfig: {
         // Puts tracking script in the head instead of the body

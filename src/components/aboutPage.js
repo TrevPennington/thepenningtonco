@@ -2,6 +2,7 @@ import React from "react"
 import "./aboutPage.css"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import Img from "gatsby-image"
+import { StaticImage } from "gatsby-plugin-image"
 
 export const AboutPage = () => {
   const bio =

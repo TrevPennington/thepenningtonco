@@ -1,7 +1,8 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Layout from "../components/layout"
-import { AboutPage } from "../components/aboutPage"
+import { ParallaxLayout } from "../components/parallaxLayout"
+import "./about.css"
+import { StaticImage } from "gatsby-plugin-image"
 
 export const data = graphql`
   query {
@@ -17,8 +18,23 @@ export const data = graphql`
 
 export default ({ data }) => {
   return (
-    <Layout location="about" image={data.hero.childImageSharp.fluid}>
-      <AboutPage />
-    </Layout>
+    <ParallaxLayout location="about" imageSrc={data.hero.childImageSharp.fluid}>
+      <div className="container">
+        <div className="imageContainer">
+          <StaticImage
+            src="../images/about/usthree.jpg"
+            alt="Trevor and Shelby Pennington"
+            placeholder="blurred"
+            layout="fixed"
+            width={400}
+            height={600}
+          />
+        </div>
+
+        <div className="bioContainer">
+          <p className="title">Trevor + Shelby</p>
+        </div>
+      </div>
+    </ParallaxLayout>
   )
 }

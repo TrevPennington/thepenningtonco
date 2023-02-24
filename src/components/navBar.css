@@ -1,0 +1,48 @@
+
+.navBar {
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 80%;
+    max-width: 80rem;
+ 
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    padding-top: 3rem;
+    color: white;
+}
+
+.logo {
+    flex: 2;
+    text-align: left;
+    font-size: 42px;
+
+    font-family: "freight-display-pro", serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.options {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    justify-content: flex-end;
+    font-size: 18px;
+
+    font-family: "freight-display-pro", serif;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.options > * {
+    min-width: 7rem;
+}

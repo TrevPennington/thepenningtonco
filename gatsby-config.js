@@ -9,6 +9,7 @@ module.exports = {
     author: `Trevor Pennington`,
   },
   plugins: [
+    `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-transformer-remark`,
@@ -33,6 +34,15 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
+
+    {
+      resolve: "gatsby-plugin-web-font-loader",
+      options: {
+        typekit: {
+          id: "iod1thr",
+        },
+      },
+    },
 
     {
       resolve: `gatsby-source-filesystem`,
